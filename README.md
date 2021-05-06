@@ -1,5 +1,5 @@
 # OpenDNSSEC User Manual
-The Official OpenDNSSEC User Manual, published at [opendnssec.readthedocs.io](https://opendnssec.readthedocs.io)
+The Official OpenDNSSEC User Manual, published at [opendnssec.docs.nlnetlabs.nl](https://opendnssec.docs.nlnetlabs.nl)
 
 
 ## Style Guide
