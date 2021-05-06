@@ -79,8 +79,9 @@ pygments_style = 'sphinx'
 #
 html_theme = 'sphinx_rtd_theme'
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+html_logo = 'resources/ODS_Logo.png'
 html_theme_options = {
-    'logo_only': False,
+    'logo_only': True,
     'display_version': True,
 }
 
