@@ -1,4 +1,4 @@
-# Krill User Manual
+# OpenDNSSEC User Manual
 The Official OpenDNSSEC User Manual, published at [opendnssec.readthedocs.io](https://opendnssec.readthedocs.io)
 
 
