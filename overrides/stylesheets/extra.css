@@ -1,0 +1,39 @@
+body {
+  --md-primary-fg-color: #00b5cc;
+}
+.md-header {
+  background-color: white;
+  color: #00b5cc;
+}
+.md-header__title {
+  height: 4rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+.md-header__button.md-logo img {
+  height: 3rem;
+}
+.md-header__button.md-logo svg {
+  height: 3rem;
+}
+.mycomments {
+  color: #c0c0c0;
+  align: right;
+  border: 1px solid #c0c0c0;
+  width: 70%;
+  margin-left: 25%;
+  padding: 5px 10px 5px 10px;
+}
+
+.myfooter {
+  display: flex;
+}
+.myfooterelt {
+  flex: 1;
+  flex-grow: 1;
+  align-self: flex-end;
+}
+.myfooterelt:first-child {
+  margin-top: 30px;
+  margin-right: 20px;
+}
