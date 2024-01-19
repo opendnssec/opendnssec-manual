@@ -1,11 +1,15 @@
-# OpenDNSSEC User Manual
-The Official OpenDNSSEC User Manual, published at [opendnssec.docs.nlnetlabs.nl](https://opendnssec.docs.nlnetlabs.nl)
+# OpenDNSSEC
 
+## Introduction
 
-## Style Guide
+OpenDNSSEC was created as an open-source turn-key solution for DNSSEC. It
+secures zone data just before it is published in an authoritative name server.
 
-This manual uses British English. Since there is quite a bit of leeway in
-English style, we use the [European Commission’s English Style Guide] as
-guidance.
+## More Information
 
-[European Commission’s English Style Guide]: https://ec.europa.eu/info/sites/info/files/styleguide_english_dgt_en.pdf
+More informnation can be found at the project website available at
+http://www.opendnssec.org/ and on the development WIKI at
+http://wiki.opendnssec.org/.
+
+Information about announcements, bug reporting and mailing lists can be found
+at http://www.opendnssec.org/support/.
