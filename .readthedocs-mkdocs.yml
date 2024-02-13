@@ -1,0 +1,69 @@
+site_name: OpenDNSSEC
+docs_dir: wiki
+
+plugins:
+  - include-markdown
+  - mermaid2
+  - search
+  - exclude-search:
+      exclude:
+        - '*.txt'
+        - 'howto.md'
+      exclude_unreferenced: false
+  - section-index
+
+extra_css:
+  - stylesheets/extra.css
+
+theme:
+  name: material
+  logo: assets/logo.png
+  extra: https://www.opendnssec.org/
+  # favicon: images/favicon.png
+  palette:
+    primary: custom
+  custom_dir: overrides
+  highlightjs: false
+  features:
+    - navigation.tabs
+    - navigation.sections
+
+markdown_extensions:
+  - pymdownx.details:
+
+extra_javascript:
+  - https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js
+
+nav:
+  - 'Home':
+    - 'index.md'
+    - 'Quickly getting start': 'quickstart.md'
+  - 'OpenDNSSEC overview':
+    - 'overview.md'
+    - 'HSMs': 'hsm.md'
+  - 'SoftHSM':
+    - 'softhsm.md'
+    - 'SoftHSM v2': 'softhsm2.md'
+    - 'Design': 'softhsm2-design.md'
+    - 'Requiremens': 'softhsm-requirements.md'
+    - 'SoftHSM v2 (depricated)': 'softhsm1.md'
+  - 'User guide':
+    - 'userguide/index.md'
+  - 'Configuration guide':
+    - 'configuration.md'
+    - 'conf.xml': 'configuration/confxml.md'
+    - 'kasp.xml': 'configuration/kaspxml.md'
+    - 'addns.xml': 'configuration/addnsxml.md'
+    - 'zonelist.xml': 'configuration/zonelistxml.md'
+    - 'datetime': 'configuration/datetime.md'
+  - 'Other material':
+    - 'overview-other-documentation.md'
+    - 'OpenDNSSEC 1.4 reference': 'opendnssec14.md'
+    - 'OpenDNSSEC 1.3 reference': 'opendnssec13.md'
+  - How-to:
+    - 'howto.md'
+    - 'Algorithm Rollover': 'howto/algorollover.md'
+    - 'Frequently Asked': 'faq.md'
+  - About:
+    - 'Project Management': 'opendnssec-projectmanagement.md'
+    - 'Meetings': 'meetings.md'
