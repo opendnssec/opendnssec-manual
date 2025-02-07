@@ -4,7 +4,7 @@
 
 The OpenDNSSEC documentation gives information on how to install, configure, and run OpenDNSSEC. There might still remain some questions, so we try to reflect them in our a growing list of frequently asked questions.
 
-Remember that you also need an HSM, which uses the PKCS#11 interface. We do provide the (SoftHSM)[softhsm], a software-only implementation of an HSM.
+Remember that you also need an HSM, which uses the PKCS#11 interface. We do provide the [SoftHSMv2](softhsm2), a software-only implementation of an HSM.
 
 The latest version of OpenDNSSEC is 2.1.  Versions prior to 2.1 (like 1.3 and 1.4) are no longer supported.
 
@@ -34,8 +34,8 @@ The auditor is no longer supported in 1.4. This greatly reduced the dependencies
 
 ### Documentation downloads
 
-- (OpenDNSSEC_Documentation_v1.4.pdf)[OpenDNSSEC_Documentation_v1.4.pdf]
-- (OpenDNSSEC_Documentation_v1.4.html.zip)[OpenDNSSEC_Documentation_v1.4.html.zip]
-- (OpenDNSSEC Documentation_v1.3.pdf)[OpenDNSSEC Documentation_v1.3.pdf]
-- (OpenDNSSEC Documenation_v1.3.html.zip)[assets/OpenDNSSEC Documenation_v1.3.html.zip]
+- [OpenDNSSEC_Documentation_v1.4.pdf](assets/OpenDNSSEC_Documentation_v1.4.pdf)
+- [OpenDNSSEC_Documentation_v1.4.html.zip](assets/OpenDNSSEC_Documentation_v1.4.html.zip)
+- [OpenDNSSEC Documentation_v1.3.pdf](assets/OpenDNSSEC_Documentation_v1.3.pdf)
+- [OpenDNSSEC Documentation_v1.3.html.zip](assets/OpenDNSSEC_Documenation_v1.3.html.zip)
 
