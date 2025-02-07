@@ -22,7 +22,7 @@ Installed on a system it will, with a minimum amount of operator input:
 
 - Handle the signing of DNS records, including the regular re-signing needed during normal operations.
 - Handle the generation and management of keys, including key rollover.
-- Seamlessly integrate with external cryptographic hardware such as HSM:s (including USB tokens and smart cards).
+- Seamlessly integrate with external cryptographic hardware such as HSMs (including USB tokens and smart cards).
 - Seamlessly integrate into an existing deployment scenario, without the necessity to overhaul the entire existing infrastructure.
 
 ### Target group and scope
