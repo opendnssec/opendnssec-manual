@@ -37,7 +37,7 @@ extra_javascript:
 nav:
   - 'Home':
     - 'index.md'
-    - 'Quickly getting start': 'quickstart.md'
+    - 'Quickly getting started': 'quickstart.md'
   - 'OpenDNSSEC overview':
     - 'overview.md'
     - 'HSMs': 'hsm.md'
