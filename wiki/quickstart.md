@@ -4,7 +4,7 @@
 In this quick start guide we will show how you can a simple OpenDNSSEC installation running from source code, using SoftHSMv2 as your crypto library and key store.  We assume you have root access through sudo, but will be running OpenDNSSEC as the current logged in user and have /usr/sbin in your PATH. Sometimes we may refer to Ubuntu packages, but other distributions have the same packages available.  We will pass through the following steps:
 
 1. Get the necessary dependencies in place
-2. Obtain SoftHSMv1 source code, compile and install.
+2. Obtain SoftHSMv2 source code, compile and install.
 3. Obtain OpenDNSSEC source code, compile and install
 4. Prepare the system for first usage
 5. Add a zone, get it signed
