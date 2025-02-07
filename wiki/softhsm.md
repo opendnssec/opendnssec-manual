@@ -13,7 +13,7 @@ A potential problem with the use of the PKCS#11 interface is that it might limit
 
 ### SoftHSM v1
 
-[The first version of SoftHSM](softhsm2.md) was developed for OpenDNSSEC using the general requirements for DNSSEC. It uses the library Botan for the crypto operations and the keys are stored in a database backend using SQLite.
+[The first version of SoftHSM](softhsm1.md) was developed for OpenDNSSEC using the general requirements for DNSSEC. It uses the library Botan for the crypto operations and the keys are stored in a database backend using SQLite.
 
 SoftHSM v1 is now no longer supported.
 
