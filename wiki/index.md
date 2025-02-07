@@ -10,7 +10,7 @@ The vulnerabilities in the DNS system was addressed at an IETF meeting in Novemb
 
 ### Problem discussion
 
-A major obstacle to the widespread adoption of DNSSEC is the complexity of implementing it. There is no package that one can install on a system, click the "start" button, and have DNSSEC running. Instead, there are a variety of tools, none of which on their own is a complete solution. To actually run a DNSSEC-enabled authoritative server requires writing custom scripts to link them together. Even then, aspects of DNSSEC management such as key management and use of hardware assistance (such as HSM:s) have not been adequately addressed.
+A major obstacle to the widespread adoption of DNSSEC is the complexity of implementing it. There is no package that one can install on a system, click the "start" button, and have DNSSEC running. Instead, there are a variety of tools, none of which on their own is a complete solution. To actually run a DNSSEC-enabled authoritative server requires writing custom scripts to link them together. Even then, aspects of DNSSEC management such as key management and use of hardware assistance (such as HSMs) have not been adequately addressed.
 
 ### Purpose
 
