@@ -64,7 +64,7 @@ We will start to initialize the HSM storage:
 
     softhsm2-util --init-token --label OpenDNSSEC --pin 1234 --so-pin 1234 --free
 
-This will instruct SoftHSM to initialize the token database, which is in the first free (virtual) physical location slot, give it the name OpenDNSSEC and protect it with a PIN number.  The PIN number and label are referred to by the OpenDNSSEC configuration and will match the shipped configuration in ``/etc/opendnssec/conf.xml`.  We can now proceed to initialize the OpenDNSSEC database.
+This will instruct SoftHSM to initialize the token database, which is in the first free (virtual) physical location slot, give it the name OpenDNSSEC and protect it with a PIN number.  The PIN number and label are referred to by the OpenDNSSEC configuration and will match the shipped configuration in ``/etc/opendnssec/conf.xml``.  We can now proceed to initialize the OpenDNSSEC database.
 
     ods-enforcer-db-setup
 
