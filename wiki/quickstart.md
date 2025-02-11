@@ -102,7 +102,7 @@ We have now done every thing to get a zone signed.  There is a bit of extra info
 - Start OpenDNSSEC using ``ods-control start``, and stop it using ``ods-control stop``.  OpenDNSSEC actually consist of two daemon processes, the signer and enforcer which can also be controlled separately.
 - It is not enough to reset your system using ``ods-enforcer-db-setup`` as state is also kept in ``/var/opendnssec``.
 - Look at the configuration file ``/etc/opendnssec/conf.xml`` and its [documentation](https://github.com/opendnssec/opendnssec/blob/2.1/master/conf/conf.rnc). You need to change this if you want to use a different HSM or tie OpenDNSSEC into other software systems.
-- Look at the configuration of policies in ``/etc/opendnssec/kasp.xml``, it is highly configurable to indicate how often and fast you want to roll keys.  If you want to change it, you will need to reload the policies using ``ods-enforcer policy import`` again. Use ``ods-kaspcheck`` to validate your policy file!
+- Look at the configuration of policies in ``/etc/opendnssec/kasp.xml`` and its [documentation](https://github.com/opendnssec/opendnssec/blob/2.1/master/conf/kasp.rnc). it is highly configurable to indicate how often and fast you want to roll keys.  If you want to change it, you will need to reload the policies using ``ods-enforcer policy import`` again. Use ``ods-kaspcheck`` to validate your policy file!
 
 - Have a look at the ``ods-enforcer`` manual page.  This is the primary control tool to add, delete zones, review key states, et cetera.
 
