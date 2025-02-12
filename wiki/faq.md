@@ -71,4 +71,4 @@
 
 ??? "How can I validation the zones produced by OpenDNSSEC?"
 
-    This is external to OpenDNSSEC.  You can add a hidden master after OpenDNSSEC which can do custom validation before you push the signed zone to the public authoratative servers.  An example is to use CreDNS which is embedded in the latest NSD server.
+    This is external to OpenDNSSEC.  You can add a hidden master after OpenDNSSEC which can do custom validation before you push the signed zone to the public authoritative servers.  An example is to use CreDNS which is embedded in the latest NSD server.

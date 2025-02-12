@@ -14,11 +14,11 @@ This chapter will give an introduction to the OpenDNSSEC project. The background
 
 **Background**
 
-A domain name, like  http://www.google.com, is actually a representation of an IP address, the address of a computer. This translation is done with the help of the Domain Name System (DNS). This is useful for an ordinary user because the domain name is more mnemonic than the IP address. The main objective for the DNS system is to translate the domain name into an IP address, but it can also do load balancing, host aliasing, mail server aliasing, and more.
+A domain name, like  <http://www.google.com>, is actually a representation of an IP address, the address of a computer. This translation is done with the help of the Domain Name System (DNS). This is useful for an ordinary user because the domain name is more mnemonic than the IP address. The main objective for the DNS system is to translate the domain name into an IP address, but it can also do load balancing, host aliasing, mail server aliasing, and more.
 
 This translation from a domain name to an IP address is not as straight forward as one could think. The DNS system is a service that has been around for many years and was conceived in a time when security was not a design issue for internet protocols. By time, vulnerabilities are inevitably found in the system and its protocols. There are several know classes of threats to the DNS system: Packet Interception, ID Guessing and Query Prediction, Name Chaining, Betrayal By Trusted Server, and Denial of Service (DoS). The impact of some of these threats is that an attacker could for instance redirect the traffic for a web page to a malicious server without the user knowing anything and thereby having a complete control of the information flow to the user.
 
-The vulnerabilities in the DNS system was addressed at an IETF meeting in November 1993 where the first organized work started on the Domain Name System Security Extentions (DNSSEC). The resolver/user can, with the help of digital signatures, detect any modifications by third parties on the information from the DNS system, thus defeating most of the known vulnerabilities. DNSSEC is although vulnerable to the DoS attacks, like all other network services. For more information on how DNSSEC is working, read <http://www.dnssec.net>.
+The vulnerabilities in the DNS system was addressed at an IETF meeting in November 1993 where the first organized work started on the Domain Name System Security Extensions (DNSSEC). The resolver/user can, with the help of digital signatures, detect any modifications by third parties on the information from the DNS system, thus defeating most of the known vulnerabilities. DNSSEC is although vulnerable to the DoS attacks, like all other network services. For more information on how DNSSEC is working, read <http://www.dnssec.net>.
 
 **Problem discussion**
 
@@ -173,90 +173,92 @@ The scope of this document covers the first phase of development, a system that 
 
 2.1 Basic Requirements 
 
-a. The system MUST be able to deal with configurations containing zero or more zones.
-b. The system MUST be able to handle zone sizes ranging from a few RRs to millions of RRs.
-c. The system MUST accept zone data in the form of a zone file in standard presentation format
-d. The system MUST output signed zone data as a zone file in standard presentation format. 
+1. The system MUST be able to deal with configurations containing zero or more zones.
+2. The system MUST be able to handle zone sizes ranging from a few RRs to millions of RRs.
+3. The system MUST accept zone data in the form of a zone file in standard presentation format
+4. The system MUST output signed zone data as a zone file in standard presentation format. 
    - The system SHOULD be able to send a notify command to the local nameserver upon changed output signed zones.
-e. The system MUST be able to accept input zone data via an AXFR: 
+5. The system MUST be able to accept input zone data via an AXFR: 
    - The system MUST be able to request an AXFR from an authoritative server.
    - The system MUST be able to process NOTIFY messages received from an authoritative server.
-f. In the case of AXFR transfers, the system MUST support TSIG authentication with the upstream authoritative server.
-g. The system MUST NOT depend on the BIND tools for signing.
+6. In the case of AXFR transfers, the system MUST support TSIG authentication with the upstream authoritative server.
+7. The system MUST NOT depend on the BIND tools for signing.
 
 2.2 Normal Operations 
 
 2.2.1 Startup/Shutdown?
 
-a. A start-up script SHOULD be supplied that allows the software to be started when the system starts up.
-b. The system MUST be able to drop privileges upon start up.
-c. It MUST be possible to shutdown all long-running software cleanly.
-d. If the software is not cleanly shutdown, it MUST be possible to restart it with no loss of data.
+1. A start-up script SHOULD be supplied that allows the software to be started when the system starts up.
+2. The system MUST be able to drop privileges upon start up.
+3. It MUST be possible to shutdown all long-running software cleanly.
+4. If the software is not cleanly shutdown, it MUST be possible to restart it with no loss of data.
    __ Note: if this provides difficult/impossible to implement automatically, it is allowable for written instructions to be supplied describing how to manually recover from a failure.__
 
 2.2.2 Configuration
 
-a. It MUST be possible to specify a list of zones to be signed.
-b. It MUST be possible to specify a policy for each zone that specifies how the zone should be signed.
-c. Sensible default values MUST be provided for all configuration parameters.
+1. It MUST be possible to specify a list of zones to be signed.
+2. It MUST be possible to specify a policy for each zone that specifies how the zone should be signed.
+3. Sensible default values MUST be provided for all configuration parameters.
    __ Note: This is likely to be in the form of a default policy.__
 
 2.2.3 Operation
 
-a. syslog() MUST be used as the logging mechanism.
-b. The choice of which operations to log SHOULD be configurable.
-c. The syslog() facility under which messages are logged SHOULD be configurable
-d. Components of the system should use the following log levels: 
+1. syslog() MUST be used as the logging mechanism.
+2. The choice of which operations to log SHOULD be configurable.
+3. The syslog() facility under which messages are logged SHOULD be configurable
+4. Components of the system should use the following log levels:
+
    - Info - for informational messages. (System has worked, this is possibly useful information.)
    - Warning - for warning messages. (System has worked, but this condition was sufficiently unusual to remark upon.)
    - Error - for error messages. (System has encountered a problem.)
    - Alert - for messages where the operator needs to be notified immediately.
      __ Note: if something goes wrong, the system might log multiple error messages as a result. However, only one alert message is required.__
-e. All errors MUST be logged.
+
+5. All errors MUST be logged.
 
 2.3 Signing Process 
 
 2.3.1 Signing Policy 
 
-a. The system MUST sign each zone according to a pre-defined policy. (This determines parameters such as signing interval, key length, signature lifetime etc.)
-b. It MUST be possible for each zone to have its own policy.
-c. The policy for the zone MUST allow values for the following signing parameters to be set: 
-   a. Inception offset. (This is the time before the present at which the signatures first become valid. It allows for clock skew, a difference in times between two systems on a network.)
-   b. The signature re-sign interval. The period of which the Signer runs.
-   c. The signature refresh interval. The Signer will reuse a signature until it has this amount of time remaining in its validity period. After this will a new signature be generated.
-   d. The default signature validity period of RRSIGs. (Note: this is the time from signing for which the records are valid.)
-   e. Jitter. (Note: This is a value, uniformly distributed between zero and some maximum, added to the signature validity period to prevent all records signature expiring at once.)
-   f. The TTL for DNSKEY records. (Note: this is the TTL for the DNSKEY records generated by the system. It also overrides the TTL associated with any DNSKEY records in the input file (as all DNSKEY records in an RRset should have the TTL).)
-   g. Signature scheme: 
-      a. RSA/SHA1 MUST be supported for signatures.
-      b. RSA/SHA-256 MUST be supported for signatures.
-      c. RSA/SHA-512 MUST be supported for signatures.
-d. The policy MUST allow a choice of authenticated denial scheme: 
+1. The system MUST sign each zone according to a pre-defined policy. (This determines parameters such as signing interval, key length, signature lifetime etc.)
+2. It MUST be possible for each zone to have its own policy.
+3. The policy for the zone MUST allow values for the following signing parameters to be set: 
+   1. Inception offset. (This is the time before the present at which the signatures first become valid. It allows for clock skew, a difference in times between two systems on a network.)
+   2. The signature re-sign interval. The period of which the Signer runs.
+   3. The signature refresh interval. The Signer will reuse a signature until it has this amount of time remaining in its validity period. After this will a new signature be generated.
+   4. The default signature validity period of RRSIGs. (Note: this is the time from signing for which the records are valid.)
+   5. Jitter. (Note: This is a value, uniformly distributed between zero and some maximum, added to the signature validity period to prevent all records signature expiring at once.)
+   6. The TTL for DNSKEY records. (Note: this is the TTL for the DNSKEY records generated by the system. It also overrides the TTL associated with any DNSKEY records in the input file (as all DNSKEY records in an RRset should have the TTL).)
+   7. Signature scheme: 
+      1. RSA/SHA1 MUST be supported for signatures.
+      2. RSA/SHA-256 MUST be supported for signatures.
+      3. RSA/SHA-512 MUST be supported for signatures.
+4. The policy MUST allow a choice of authenticated denial scheme: 
    - NSEC MUST be supported.
    - NSEC3 without opt-out MUST be supported.
    - NSEC3 with opt-out MUST be supported.
-e. The policy for the zone SHOULD allow values for the following to be set: 
-   a. The signature lifetime of the RRSIG for NSEC/NSEC3 records.  
+5. The policy for the zone SHOULD allow values for the following to be set: 
+   1. The signature lifetime of the RRSIG for NSEC/NSEC3 records.  
        __Note: If not specified, the signature lifetime of NSEC/NSEC3 records should be that of other RRSIG records in the zone.__
-   b. The parameters for the NSEC3PARAM record: hash algorithm, flags, iterations and salt.
-   c. The parameters for the SOA record: serial, minimum, ttl.
+   2. The parameters for the NSEC3PARAM record: hash algorithm, flags, iterations and salt.
+   3. The parameters for the SOA record: serial, minimum, ttl.
 
 2.3.2 Signing Process 
 
-a. The signer MUST discard all DNSSEC RRs (except DNSKEY RRs) from the input data.  
-   __ Note: DNSKEY RRs may be in the input zone file if the zone is in the process of moving between DNS operators.__
+1. The signer MUST discard all DNSSEC RRs (except DNSKEY RRs) from the input data.  
+   Note: DNSKEY RRs may be in the input zone file if the zone is in the process of moving between DNS operators.
 
 2.4 Key Management 
 
 2.4.1 Key Generation
 
-a. The system MUST generate keys as required according to the policy for the zone.
-b. The system MUST allow additional keys to be manually generated by the operator.
-c. The policy for the zone MUST allow the following key parameters to be set: 
-   a. The key algorithm: 
+1. The system MUST generate keys as required according to the policy for the zone.
+2. The system MUST allow additional keys to be manually generated by the operator.
+3. The policy for the zone MUST allow the following key parameters to be set: 
+   1. The key algorithm: 
       - RSA MUST be supported as a key algorithm.
-   b. RSA key lengths between 1024 and 4096 bits MUST be supported.
-d. The MUST have an option that will system not allow keys to be used until they have been backed up.  
+   2. RSA key lengths between 1024 and 4096 bits MUST be supported.
+4. The MUST have an option that will system not allow keys to be used until they have been backed up.  
    __Note: this means that there must be some way of notifying to the system that the backup has been done.__
 
 2.4.2 Key Storage

@@ -48,7 +48,7 @@ The next part of the zone element specifies from where OpenDNSSEC gets the zone 
         </Output>
     </Adapters>
 
-The <Adapters> element comprises an <Input> and <Output> element which (fairly obviously) identify the input source and output sink of the data.
+The `<Adapters>` element comprises an `<Input>` and `<Output>` element which (fairly obviously) identify the input source and output sink of the data.
 
-Within each element is a tag defining the type of data source/sink and its parameters. There is type="File", which takes as its only data the name of the input unsigned file, or output signed zone file. And there is type="DNS", which takes a configuration file as its data. The DNS adapter configuration file is described in more detail in the description of the (addnsxml documentation)[addnsxml].
-The </Zone> tag closes the definition of the zone. As indicated above, one or more zones can be defined in this file. The </ZoneList> element closes the file.
+Within each element is a tag defining the type of data source/sink and its parameters. There is type="File", which takes as its only data the name of the input unsigned file, or output signed zone file. And there is type="DNS", which takes a configuration file as its data. The DNS adapter configuration file is described in more detail in the description of the [addnsxml documentation](addnsxml).
+The `</Zone>` tag closes the definition of the zone. As indicated above, one or more zones can be defined in this file. The `</ZoneList>` element closes the file.

@@ -120,9 +120,9 @@ Parameters for key-signing keys are held in the <KSK> section:
 - ``<Repository>`` determines the location of the keys. Keys are stored in "repositories", which are defined in the conf.xml. In the example above, the key is stored in softHSM. The example configuration file distributed with OpenDNSSEC defines this as being the software emulation of an HSM distributed as part of OpenDNSSEC.
 - ``<ManualRollover/>`` is an optional tag. This tag indicate that the key rollover will only be initiated on the command by the operator. There is still a second step for the KSK, where the key needs to be published to the parent before the rollover is completed. Read more in the chapter "Running OpenDNSSEC". The ZSK rollover will although be fully automatic if this tag is not present.
 
-> :memo:
-> **Standby Keys**  
-> Before version 2.0 the KSK section could have a <StandbyKeys> element. Key rollovers are a process that can be interrupted at any time in OpenDNSSEC 2.0 and therefore the notion of standby keys was dropped. The element is ignored but still accepted to ease migration
+
+**Standby Keys**  
+Before version 2.0 the KSK section could have a <StandbyKeys> element. Key rollovers are a process that can be interrupted at any time in OpenDNSSEC 2.0 and therefore the notion of standby keys was dropped. The element is ignored but still accepted to ease migration
 
 ### Zone-Signing Keys
 

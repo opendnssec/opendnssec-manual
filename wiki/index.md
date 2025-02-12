@@ -2,7 +2,7 @@
 
 ### Background
 
-A domain name, like www.google.com, is actually a representation of an IP address, the address of a computer. This translation is done with the help of the Domain Name System (DNS). This is useful for an ordinary user because the domain name is more mnemonic than the IP address. The main objective for the DNS system is to translate the domain name into an IP address, but it can also do load balancing, host aliasing, mail server aliasing, and more.
+A domain name, like <www.google.com>, is actually a representation of an IP address, the address of a computer. This translation is done with the help of the Domain Name System (DNS). This is useful for an ordinary user because the domain name is more mnemonic than the IP address. The main objective for the DNS system is to translate the domain name into an IP address, but it can also do load balancing, host aliasing, mail server aliasing, and more.
 
 This translation from a domain name to an IP address is not as straight forward as one could think. The DNS system is a service that has been around for many years and was conceived in a time when security was not a design issue for internet protocols. By time, vulnerabilities are inevitably found in the system and its protocols. There are several know classes of threats to the DNS system: Packet Interception, ID Guessing and Query Prediction, Name Chaining, Betrayal By Trusted Server, and Denial of Service (DoS). The impact of some of these threats is that an attacker could for instance redirect the traffic for a web page to a malicious server without the user knowing anything and thereby having a complete control of the information flow to the user.
 
@@ -32,5 +32,3 @@ The OpenDNSSEC software will be applicable to a wide variety of DNS configuratio
 - Organisations (such as TLDs) that manage few zones, each with a large number of records.
 - Organisations (such as ISPs) that manage a large number of zones, each with few records.
 - Organisations (such as companies managing their own zones) that have a single zone with relatively few records.
-
-

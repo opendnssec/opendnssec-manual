@@ -6,11 +6,11 @@ The overall configuration of OpenDNSSEC is defined by the contents of the file /
 
     <?xml version="1.0" encoding="UTF-8"?>
 
-Each XML file starts with a standard element "<?xml...". As with any XML file, comments are included between the delimiters "<!--" and  "-->".
+Each XML file starts with a standard element `<?xml...`. As with any XML file, comments are included between the delimiters `<!--` and  `-->`.
 
-   <Configuration>
+    <Configuration>
        ...
-   </Configuration>
+    </Configuration>
 
 The enclosing element of the XML file is the element <Configuration> which, with the closing element </Configuration>, brackets the configuration information.
 
@@ -72,11 +72,11 @@ These are the configuration that is shared among the components of OpenDNSSEC.
         <ZoneListFile>/etc/opendnssec/zonelist.xml</ZoneListFile>
     </Common>
 
-- All components of OpenDNSSEC logs errors, warnings and progress information. This is configurable and defined in the <Logging> element. Currently, the only syslog() feature configurable via the OpenDNSSEC configuration file is the facility name under which messages are logged. This can be any of the names listed in the operating system's syslog header file (usually /usr/include/sys/syslog.h, but the location is system dependent). 
-- <Verbosity> controls the level of logging, 0 will disable logging and 3 (default level) will provide informational log messages. You can set it higher to get debug log messages.
+- All components of OpenDNSSEC logs errors, warnings and progress information. This is configurable and defined in the `<Logging>` element. Currently, the only syslog() feature configurable via the OpenDNSSEC configuration file is the facility name under which messages are logged. This can be any of the names listed in the operating system's syslog header file (usually /usr/include/sys/syslog.h, but the location is system dependent). 
+- `<Verbosity>` controls the level of logging, 0 will disable logging and 3 (default level) will provide informational log messages. You can set it higher to get debug log messages.
 
-> :bulb:
-> Although any facility listed there can be used, it is recommended that one of the "local" facilities (usually "local0" through "local7") be used.
+
+Although any facility listed there can be used, it is recommended that one of the "local" facilities (usually "local0" through "local7") be used.
 
 Then you also have pointers to where the policy and zone list files can be found. There are also an optional element where you specify the path of the zone fetch configuration used for inbound AXFR.
 
