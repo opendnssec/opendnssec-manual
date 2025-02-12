@@ -8,7 +8,7 @@ The policies are defined in the KASP (Key And Signing Policies). These describe 
 
 A OpenDNSSEC instance has 3 main components: HSM, Enforcer, and Signer.
 
-![ods-architecture_1.4.png]
+![ODS 1.4 Architecture](assets/ods-architecture_1.4.png)
 
 ### HSM
 

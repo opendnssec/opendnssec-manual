@@ -39,7 +39,7 @@ As defined in RFC 1035 the following directives are supported by OpenDNSSEC:
 
 #### RR types
 
-OpenDNSSEC support all of the RR specified by (IANA)[http://www.iana.org/assignments/dns-parameters], with some exceptions:
+OpenDNSSEC support all of the RR specified by [IANA](http://www.iana.org/assignments/dns-parameters), with some exceptions:
 
 > | Not supported         | ATMA, APL, EID, NIMLOC, HIP, SINK, NINFO, RKEY, TA |
 > | Obsoleted             | MD, MF, WKS, GPOS, SIG, KEY, NXT, A6, and NSAP-PTR |
@@ -47,6 +47,6 @@ OpenDNSSEC support all of the RR specified by (IANA)[http://www.iana.org/assignm
 
 #### Handling of unknown RR types
 
-But OpenDNSSEC does handle unknown RR types in accordance with (RFC3597)[http://www.ietf.org/rfc/rfc3597.txt] e.g:
+But OpenDNSSEC does handle unknown RR types in accordance with [RFC3597](http://www.ietf.org/rfc/rfc3597.txt) e.g:
  
 > example.com.   IN          TYPE1               # 4 0A000001

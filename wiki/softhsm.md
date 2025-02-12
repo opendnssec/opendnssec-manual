@@ -1,7 +1,7 @@
 ## SoftHSM
 
-(SoftHSM)[http://www.opendnssec.org/softhsm/] is an implementation of a cryptographic store accessible through a PKCS#11 interface.
-It is being developed as a part of the OpenDNSSEC project.
+[SoftHSM](http://www.opendnssec.org/softhsm/) is an implementation of a cryptographic store accessible through a PKCS#11 interface.
+It was developed as a part of the OpenDNSSEC project.
 
 - <http://www.opendnssec.org/softhsm/>
 
@@ -13,14 +13,14 @@ A potential problem with the use of the PKCS#11 interface is that it might limit
 
 ### SoftHSM v1
 
-(The first version of SoftHSM)[softhsm2] was developed for OpenDNSSEC using the general requirements for DNSSEC. It uses the library Botan for the crypto operations and the keys are stored in a database backend using SQLite.
+[The first version of SoftHSM](softhsm1.md) was developed for OpenDNSSEC using the general requirements for DNSSEC. It uses the library Botan for the crypto operations and the keys are stored in a database backend using SQLite.
 
 SoftHSM v1 is now no longer supported.
 
 ### SoftHSM v2
 
 It focuses on a higher level of security by encrypting sensitive information and using unswappable memory. There is also a more generalized crypto backend, where you can use Botan or OpenSSL.  
-Visit the (SoftHSM v2 page)[softhsm2] for more information.
+Visit the [SoftHSM v2 page](softhsm2) for more information.
 
 ### Pros and Cons
 

@@ -55,7 +55,7 @@ The first phase will firstly deliver a proof of concept. This will be various pi
 
 The second phase will deliver a version with somewhat richer features.
 
-**Excluding 
+**Excluding** 
 
 The third phase of OpenDNSSEC, and its future, is not part of this project plan. What the third phase of OpenDNSSEC consist of will be evaluated during the second phase of this project.
 
@@ -73,12 +73,12 @@ The work of this project is mainly depending on the most current RFCs from the I
 
 This collection of information is the result of a cooperation between the following parties:
 
-- (.SE)[http://www.iis.se/]
-- (John A Dickinson)[http://jadickinson.co.uk/]
-- (Kirei AB)[http://www.kirei.se/]
-- (NLNetLabs)[http://www.nlnetlabs.nl/]
-- (Nominet)[http://www.nominet.org.uk/]
-- (SURFnet)[http://www.surfnet.nl/en/]
+- [.SE](http://www.iis.se/)
+- [John A Dickinson](http://jadickinson.co.uk/)
+- [Kirei AB](http://www.kirei.se/)
+- [NLNet Labs](http://www.nlnetlabs.nl/)
+- [Nominet](http://www.nominet.org.uk/)
+- [SURF](http://www.surf.nl/)
 
 ## Use Cases
 
@@ -90,8 +90,8 @@ Two sets of use-cases are given, one for each phase of the project.
 
 The following diagrams show the use-cases covered by this phase:
 
-![assets/ZoneFileUseCasesA]  
-![assets/ZoneFileUseCasesB]
+![assets/ZoneFileUseCasesA](assets/ZoneFileUseCasesA.png)
+![assets/ZoneFileUseCasesB](assets/ZoneFileUseCasesB.png)
 
 **Actors**
 
@@ -402,82 +402,33 @@ This project has a greater chance of success if possible risks are analyzed and 
 
 The aim with a SWOT analysis is to get a better view of the current situation of the project and its environment. By having this analysis in mind future problems might be avoided.
 
-|------------------|---------------------------------------|---------------------------------------|
-| Internal factors | **Strengths**                         | **Weaknesses**                        |
-|                  | Practical experiences                 | Wide customer group                   |
-|                  | High knowledge level                  | Decentralized project                 |
-|                  | Good reputation                       | Time pressure                         |
-|                  | Developed similar projects            | Depending on multiple stakeholders    |
-|                  |                                       |                                       |
-|                  |                                       |                                       |
-|                  | The basic technologies already exist. | Outperformed by commercial            |
-|                  | We do not have to reinvent the wheel. | We do not have to reinvent the wheel. | 
-|------------------|---------------------------------------|---------------------------------------|
-| External factors | **Opportunities**                     | **Threats**                           |
-|                  | Increasing market demand              | Outperformed by commercial products   |
-|                  |                                       | Intellectual property claims          |
-|                  |                                       | Do not meet with the customers'       |
-|                  |                                       |   requirements                        |
-|------------------|---------------------------------------|---------------------------------------|
+| SWOT             |                                                                                                                                                                                                         |                                                                                                                                                                                                     |
+|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Internal factors | **Strengths**<br><br>Practical experiences<br>High knowledge level<br>Good reputation<br>Developed similar projects<br><br>The basic technologies already exist<br>We do not have to reinvent the wheel | **Weaknesses**<br><br>Wide customer group<br>Decentralized project<br>Time pressure<br>Depending on multiple stakeholders<br><br>Outperformed by commercial<br>We do not have to reinvent the wheel |
+| External factors | **Opportunities**<br><br>Increasing market demand                                                                                                                                                       | **Treats**<br><br>Outperformed by commercial products<br>Intellectual property claims<br>Do not meet customers requirements                                                                         |
 
 ### Risk analysis
 
 Different potential risks are presented here and are assigned a value depending on its consequence and probability. This helps us identify which risks are the main threats to our project. These risks are then further analysed in the next section.
 
 
-|----|-------------------------------------------------------|-------------|-------------|-------------|
-|  # | Risk                                                  | Consequence | Probability | Risk value  |
-|    |                                                       | 1-5         | 1-5         | C x P       |
-|----|-------------------------------------------------------|-------------|-------------|-------------|
-|  1 | No/few customers knows about our product when         |           3 |           4 |          12 |
-|  1 | the project is considered to be finished              |             |             |             |
-|----|-------------------------------------------------------|-------------|-------------|-------------|
-|  2 | Lack of time and resources                            |           4 |           3 |          12 |
-|----|-------------------------------------------------------|-------------|-------------|-------------|
-|  3 | Lack of knowledge                                     |           4 |           1 |           4 |
-|----|-------------------------------------------------------|-------------|-------------|-------------|
-|  4 | Key developers leaving the project                    |           4 |           2 |           8 |
-|----|-------------------------------------------------------|-------------|-------------|-------------|
-|  5 | Non-discloser of source code                          |           5 |           1 |           5 |
-|----|-------------------------------------------------------|-------------|-------------|-------------|
-|  6 | Unable to make a decision within the group            |           5 |           2 |          10 |
-|----|-------------------------------------------------------|-------------|-------------|-------------|
+| # | Risk                                                                                   | Consequence (1-5) | Probability (1-5) | Risk value (CxP) |
+|---|----------------------------------------------------------------------------------------|-------------------|-------------------|------------------|
+| 1 | No/few customers knows about our product when the project is considered to be finished | 3                 | 4                 | 12               |
+| 2 | Lack of time and resources                                                             | 4                 | 3                 | 12               |
+| 3 | Lack of knowledge                                                                      | 4                 | 1                 | 4                |
+| 4 | Key developers leaving the project                                                     | 4                 | 2                 | 8                |
+| 5 | Non-discloser of source code                                                           | 5                 | 1                 | 5                |
+| 6 | Unable to make a decision within the group                                             | 5                 | 2                 | 10               |
 
-|----|-----------------------------------|------------------------------------------|-----------|-------------|
-|  # | Risk                            | Management                               | Responsible | Finish      |
-|    |                                 |                                          |             | date        |
-|----|---------------------------------|------------------------------------------|-------------|-------------|
-|  1 | No/few customers knows about    | Make a marketing plan on how to let the  | Rickard     | February    |
-|    | our product when the project    | market know about our product            |             | 2009        |
-|    | is considered to be finished    |                                          |             |             |
-|----|---------------------------------|------------------------------------------|-------------|-------------|
-|  2 | Lack of time and resources      | Find out which resources this project    | Rickard     | January     |
-|    |                                 | has and how much they can commit to the  |             | 2009        |
-|    |                                 | project. Then plan the project according |             |             |
-|    |                                 | to this. If it still is not feasible,    |             |             |
-|    |                                 | then we have to look for other           |             |             |
-|    |                                 | participants.                            |             |             |
-|----|---------------------------------|------------------------------------------|-------------|-------------|
-|  3 | Lack of knowledge               | Each subproject must look at their       | Everyone    | January     |
-|    |                                 | requirements and make sure that they     |             | 2009        |
-|    |                                 | have the knowledge to be able to finish  |             |             |
-|    |                                 | their task. If this is not the case then |             |             |
-|    |                                 | a discussion must be made with the       |             |             |
-|    |                                 | project group.                           |             |             |
-|----|---------------------------------|------------------------------------------|-------------|-------------|
-|  4 | Key developers leaving          | All of our work must be documented and   | Everyone    | January     |
-|    | the project                     | published on our project web page. This  |             | 2009        |
-|    |                                 | also includes the source code.           |             |             |
-|----|---------------------------------|------------------------------------------|-------------|-------------|
-|  5 | Non discloser of source code    | All of the source code must be developed | Everyone    | January     |
-|    |                                 | and published under a BSD license.       |             | 2009        |
-|----|---------------------------------|------------------------------------------|-------------|-------------|
-|  6 | Unable to make a decision       | All project members have their right to  | Rickard     | January     |
-|    | within the group                | an opinion. All pros and cons are noted  |             | 2009        |
-|    |                                 | down and a voting is performed.          |             |             |
-|    |                                 | The project manager makes sure that a    |             |             |
-|    |                                 | decision isreached.                      |             |             |
-|----|---------------------------------|------------------------------------------|-------------|-------------|
+| # | Risk                                                                                   | Management                                                                                                                                                                                                 | Responsible | Finish date   |
+|---|----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|---------------|
+| 1 | No/few customers knows about our product when the project is considered to be finished | Make a marketing plan on how to let the market know about our product                                                                                                                                      | Rickard     | February 2009 |
+| 2 | Lack of time and resources                                                             | Find out which resources this project has and how much they can commit to the project Then plan the project according to this. If it still is not feasible, then we have to look for other participants.   | Rickard     | January 2009  |
+| 3 | Lack of knowledge                                                                      | Each subproject must look at their requirements and make sure that they have the knowledge to be able to finish their task. If this is not the case then a discussion must be made with the project group. | Everyone    | January 2009  |
+| 4 | Key developers leaving the project                                                     | All of our work must be documented and published on our project web page. This also includes the source code.                                                                                              | Everyone    | January 2009  |
+| 5 | Non-discloser of source code                                                           | All of the source code must be developed and published under a BSD license.                                                                                                                                | Everyone    | January 2009  |
+| 6 | Unable to make a decision within the group                                             | All project members have their right to an opinion. All pros and cons are noted down and a voting is performed. The project manager makes sure that a decision is reached.                                 | Rickard     | January 2009  |
 
 ## Project Management processes
 
@@ -745,42 +696,42 @@ For a Production release
 1. Merge develop in master  
    Straight up Git, no flow. Example with 1.4 branch.
 
-    # 1) Make sure develop is up to date, NEWS edited, version.m4 updated (append rc1 to version)
-    # 2) get latest master and develop commits
-    git fetch
-    git checkout origin/1.4/master
-    # 3) Merge and tag. --no-ff to force git to create a merge commit
-    git merge --no-ff origin/1.4/develop
-    git tag -a 1.4.8rc1
-    # 4) push! Make sure you are a release manager in the github repo settings
-    # https://github.com/orgs/opendnssec/teams/opendnssec-release-managers
-    git push
-    git push --tags
-   
+    - Make sure develop is up to date, NEWS edited, version.m4 updated (append rc1 to version)
+    - get latest master and develop commits
+        - `git fetch`
+        - `git checkout origin/1.4/master`
+    - Merge and tag. `--no-ff` to force git to create a merge commit
+        - `git merge --no-ff origin/1.4/develop`
+        - `git tag -a 1.4.8rc1`
+    - push! Make sure you are a release manager in the github repo settings
+        - https://github.com/orgs/opendnssec/teams/opendnssec-release-managers
+        - `git push`
+        - `git push --tags`
+
 2. Create and sign tarball
 
-    # 1) Make sure you have access to the corp and dist repository. 'svn update' if necessary.
-    svn co svn+ssh://www.opendnssec.org/svn/odscorp #read access
-    svn co svn+ssh://www.opendnssec.org/svn/odsdist #write access
-    # 2) Make sure we have a complete clean copy of master, new clone is effective
-    git clone https://github.com/opendnssec/opendnssec.git ods-release1.4.8
-    cd ods-release1.4.8/
-    git checkout origin/1.4/master
-    # 3) Create tarball
-    source prepdist.sh
-    make dist
-    # 4) Copy tarball to dist:
-    # use ~/odsdist/source/ for final release
-    cp opendnssec-1.4.8rc1.tar.gz ~/odsdist/source/testing/
-    # 5) Sign the tarball. The passphrase needs to be unlocked by Benno, Jakob or Yuri.
-    # See odscorp/development/pgp/README for (hardly any) details
-    cd ~/odscorp/development/pgp
-    sh sign-distfile.sh ~/repo/odsdist/source/testing/opendnssec-1.4.8rc1.tar.gz
-    cd ~/odsdist/source/testing/
-    gpg --verify opendnssec-1.4.8rc1.tar.gz.sig opendnssec-1.4.8rc1.tar.gz
-    # 6) Add files to repository.
-    svn add opendnssec-1.4.8rc1.tar.gz*
-    svn ci -m "OpenDNSSEC 1.4.8rc1"
+    - Make sure you have access to the corp and dist repository. 'svn update' if necessary.
+        - `svn co svn+ssh://www.opendnssec.org/svn/odscorp #read access`
+        - `svn co svn+ssh://www.opendnssec.org/svn/odsdist #write access`
+    - Make sure we have a complete clean copy of master, new clone is effective
+        - `git clone https://github.com/opendnssec/opendnssec.git ods-release1.4.8`
+        - `cd ods-release1.4.8/`
+        - `git checkout origin/1.4/master`
+    - Create tarball
+        - `source prepdist.sh`
+        - `make dist`
+    - Copy tarball to dist:
+        - use `~/odsdist/source/` for final release
+        - `cp opendnssec-1.4.8rc1.tar.gz ~/odsdist/source/testing/`
+    - Sign the tarball. The passphrase needs to be unlocked by Benno, Jakob or Yuri.
+        - See `odscorp/development/pgp/README` for (hardly any) details
+        - `cd ~/odscorp/development/pgp`
+        - `sh sign-distfile.sh ~/repo/odsdist/source/testing/opendnssec-1.4.8rc1.tar.gz`
+        - `cd ~/odsdist/source/testing/`
+        - `gpg --verify opendnssec-1.4.8rc1.tar.gz.sig opendnssec-1.4.8rc1.tar.gz`
+    - Add files to repository.
+        - `svn add opendnssec-1.4.8rc1.tar.gz*`
+        - `svn ci -m "OpenDNSSEC 1.4.8rc1"`
 
 3. Announce rc1 on maintainers and announce list
 
@@ -792,7 +743,7 @@ This section is outdated.
 
 The development process is divided into 8 steps. It is a life cycle that covers the major releases. 
 
-!{assets/developmentprocess.png]
+![assets/developmentprocess](assets/developmentprocess.png)
 
 Requirements
 
@@ -812,7 +763,7 @@ A more detailed design can be created once the architecture has been set. This i
 
 Implementation
 
-![assets/implementationprocess.png]
+![assets/implementationprocess](assets/implementationprocess.png)
 
 There are four different parts of the implementation phase. 
 
