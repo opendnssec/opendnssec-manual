@@ -792,7 +792,7 @@ This section is outdated.
 
 The development process is divided into 8 steps. It is a life cycle that covers the major releases. 
 
-!{assets/developmentprocess.png]
+![assets/developmentprocess](assets/developmentprocess.png)
 
 Requirements
 
@@ -812,7 +812,7 @@ A more detailed design can be created once the architecture has been set. This i
 
 Implementation
 
-![assets/implementationprocess.png]
+![assets/implementationprocess](assets/implementationprocess.png)
 
 There are four different parts of the implementation phase. 
 
