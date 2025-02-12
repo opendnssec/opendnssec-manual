@@ -696,17 +696,17 @@ For a Production release
 1. Merge develop in master  
    Straight up Git, no flow. Example with 1.4 branch.
 
-    # 1) Make sure develop is up to date, NEWS edited, version.m4 updated (append rc1 to version)
-    # 2) get latest master and develop commits
-    git fetch
-    git checkout origin/1.4/master
-    # 3) Merge and tag. --no-ff to force git to create a merge commit
-    git merge --no-ff origin/1.4/develop
-    git tag -a 1.4.8rc1
-    # 4) push! Make sure you are a release manager in the github repo settings
-    # https://github.com/orgs/opendnssec/teams/opendnssec-release-managers
-    git push
-    git push --tags
+    - Make sure develop is up to date, NEWS edited, version.m4 updated (append rc1 to version)
+    - get latest master and develop commits
+       `git fetch`
+       `git checkout origin/1.4/master`
+    - Merge and tag. `--no-ff` to force git to create a merge commit
+       `git merge --no-ff origin/1.4/develop`
+       `git tag -a 1.4.8rc1`
+    - push! Make sure you are a release manager in the github repo settings
+       https://github.com/orgs/opendnssec/teams/opendnssec-release-managers
+       `git push`
+       `git push --tags`
    
 2. Create and sign tarball
 
