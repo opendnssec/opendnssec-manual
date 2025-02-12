@@ -402,23 +402,10 @@ This project has a greater chance of success if possible risks are analyzed and 
 
 The aim with a SWOT analysis is to get a better view of the current situation of the project and its environment. By having this analysis in mind future problems might be avoided.
 
-|------------------|---------------------------------------|---------------------------------------|
-| Internal factors | **Strengths**                         | **Weaknesses**                        |
-|                  | Practical experiences                 | Wide customer group                   |
-|                  | High knowledge level                  | Decentralized project                 |
-|                  | Good reputation                       | Time pressure                         |
-|                  | Developed similar projects            | Depending on multiple stakeholders    |
-|                  |                                       |                                       |
-|                  |                                       |                                       |
-|                  | The basic technologies already exist. | Outperformed by commercial            |
-|                  | We do not have to reinvent the wheel. | We do not have to reinvent the wheel. | 
-|------------------|---------------------------------------|---------------------------------------|
-| External factors | **Opportunities**                     | **Threats**                           |
-|                  | Increasing market demand              | Outperformed by commercial products   |
-|                  |                                       | Intellectual property claims          |
-|                  |                                       | Do not meet with the customers'       |
-|                  |                                       |   requirements                        |
-|------------------|---------------------------------------|---------------------------------------|
+| SWOT             |                                                                                                                                                                                                         |                                                                                                                                                                                                     |
+|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Internal factors | **Strengths**<br><br>Practical experiences<br>High knowledge level<br>Good reputation<br>Developed similar projects<br><br>The basic technologies already exist<br>We do not have to reinvent the wheel | **Weaknesses**<br><br>Wide customer group<br>Decentralized project<br>Time pressure<br>Depending on multiple stakeholders<br><br>Outperformed by commercial<br>We do not have to reinvent the wheel |
+| External factors | **Opportunities**<br><br>Increasing market demand                                                                                                                                                       | **Treats**<br><br>Outperformed by commercial products<br>Intellectual property claims<br>Do not meet customers requirements                                                                         |
 
 ### Risk analysis
 
