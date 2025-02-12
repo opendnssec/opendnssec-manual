@@ -62,7 +62,6 @@ nav:
     - 'OpenDNSSEC 1.3 reference': 'opendnssec13.md'
   - How-to:
     - 'howto.md'
-    - 'Algorithm Rollover': 'howto/algorollover.md'
     - 'Frequently Asked': 'faq.md'
   - About:
     - 'Project Management': 'opendnssec-projectmanagement.md'
