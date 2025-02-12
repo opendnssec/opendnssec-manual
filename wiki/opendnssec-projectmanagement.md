@@ -707,31 +707,31 @@ For a Production release
         - https://github.com/orgs/opendnssec/teams/opendnssec-release-managers
         - `git push`
         - `git push --tags`
-   
+
 2. Create and sign tarball
 
-    # 1) Make sure you have access to the corp and dist repository. 'svn update' if necessary.
-    svn co svn+ssh://www.opendnssec.org/svn/odscorp #read access
-    svn co svn+ssh://www.opendnssec.org/svn/odsdist #write access
-    # 2) Make sure we have a complete clean copy of master, new clone is effective
-    git clone https://github.com/opendnssec/opendnssec.git ods-release1.4.8
-    cd ods-release1.4.8/
-    git checkout origin/1.4/master
-    # 3) Create tarball
-    source prepdist.sh
-    make dist
-    # 4) Copy tarball to dist:
-    # use ~/odsdist/source/ for final release
-    cp opendnssec-1.4.8rc1.tar.gz ~/odsdist/source/testing/
-    # 5) Sign the tarball. The passphrase needs to be unlocked by Benno, Jakob or Yuri.
-    # See odscorp/development/pgp/README for (hardly any) details
-    cd ~/odscorp/development/pgp
-    sh sign-distfile.sh ~/repo/odsdist/source/testing/opendnssec-1.4.8rc1.tar.gz
-    cd ~/odsdist/source/testing/
-    gpg --verify opendnssec-1.4.8rc1.tar.gz.sig opendnssec-1.4.8rc1.tar.gz
-    # 6) Add files to repository.
-    svn add opendnssec-1.4.8rc1.tar.gz*
-    svn ci -m "OpenDNSSEC 1.4.8rc1"
+    - Make sure you have access to the corp and dist repository. 'svn update' if necessary.
+        - `svn co svn+ssh://www.opendnssec.org/svn/odscorp #read access`
+        - `svn co svn+ssh://www.opendnssec.org/svn/odsdist #write access`
+    - Make sure we have a complete clean copy of master, new clone is effective
+        - `git clone https://github.com/opendnssec/opendnssec.git ods-release1.4.8`
+        - `cd ods-release1.4.8/`
+        - `git checkout origin/1.4/master`
+    - Create tarball
+        - `source prepdist.sh`
+        - `make dist`
+    - Copy tarball to dist:
+        - use `~/odsdist/source/` for final release
+        - `cp opendnssec-1.4.8rc1.tar.gz ~/odsdist/source/testing/`
+    - Sign the tarball. The passphrase needs to be unlocked by Benno, Jakob or Yuri.
+        - See `odscorp/development/pgp/README` for (hardly any) details
+        - `cd ~/odscorp/development/pgp`
+        - `sh sign-distfile.sh ~/repo/odsdist/source/testing/opendnssec-1.4.8rc1.tar.gz`
+        - `cd ~/odsdist/source/testing/`
+        - `gpg --verify opendnssec-1.4.8rc1.tar.gz.sig opendnssec-1.4.8rc1.tar.gz`
+    - Add files to repository.
+        - `svn add opendnssec-1.4.8rc1.tar.gz*`
+        - `svn ci -m "OpenDNSSEC 1.4.8rc1"`
 
 3. Announce rc1 on maintainers and announce list
 
