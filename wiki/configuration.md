@@ -33,20 +33,20 @@ The zone file can be formatted in many ways including multi-lined RR, comments, 
 
 As defined in RFC 1035 the following directives are supported by OpenDNSSEC:
 
-> | $ORIGIN example.com.    | What origin to use                                                                             |
-> | $TTL 1h3m               | The default TTL to use. Treated as seconds, if no suffix is used: s, m, h, d, w, S, M, H, D, W |
-> | $INCLUDE <path>         | Include a file from a given path                                                               |
+    | $ORIGIN example.com.    | What origin to use                                                                             |
+    | $TTL 1h3m               | The default TTL to use. Treated as seconds, if no suffix is used: s, m, h, d, w, S, M, H, D, W |
+    | $INCLUDE <path>         | Include a file from a given path                                                               |
 
 #### RR types
 
 OpenDNSSEC support all of the RR specified by [IANA](http://www.iana.org/assignments/dns-parameters), with some exceptions:
 
-> | Not supported         | ATMA, APL, EID, NIMLOC, HIP, SINK, NINFO, RKEY, TA |
-> | Obsoleted             | MD, MF, WKS, GPOS, SIG, KEY, NXT, A6, and NSAP-PTR |
-> | Not allowed in master | NULL, OPT, TKEY, TSIG, IXFR, AXFR, MAILB, MAILA, * |
+    | Not supported         | ATMA, APL, EID, NIMLOC, HIP, SINK, NINFO, RKEY, TA |
+    | Obsoleted             | MD, MF, WKS, GPOS, SIG, KEY, NXT, A6, and NSAP-PTR |
+    | Not allowed in master | NULL, OPT, TKEY, TSIG, IXFR, AXFR, MAILB, MAILA, * |
 
 #### Handling of unknown RR types
 
 But OpenDNSSEC does handle unknown RR types in accordance with [RFC3597](http://www.ietf.org/rfc/rfc3597.txt) e.g:
  
-> example.com.   IN          TYPE1               # 4 0A000001
+    example.com.   IN          TYPE1               # 4 0A000001

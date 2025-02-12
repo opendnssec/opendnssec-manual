@@ -21,43 +21,43 @@ For the purpose of this document, HSMs are divided into four categories:
 
 1. Software tokens
 
-Characteristics of this category are:
+    Characteristics of this category are:
 
-- Low price (probably free)
-- Almost unlimited storage capability
-- Speed for cryptographic operations is limited by the computer hardware
-- Lower security because the keys are not protected by hardware
-- Can be used if an HSM is not necessary, or to set up a testbed before purchasing a real HSM
+    - Low price (probably free)
+    - Almost unlimited storage capability
+    - Speed for cryptographic operations is limited by the computer hardware
+    - Lower security because the keys are not protected by hardware
+    - Can be used if an HSM is not necessary, or to set up a testbed before purchasing a real HSM
 
-SoftHSM is an example of a software token. It is provided by OpenDNSSEC.
+    SoftHSM is an example of a software token. It is provided by OpenDNSSEC.
 
 2. Low-cost small form-factor (smart cards and USB tokens)
 
-Characteristics of this category are:
+    Characteristics of this category are:
 
-- Low price (sub €100/unit)
-- Portable
-- Limited storage capability for key material (less than 20 RSA key-pairs)
-- Limited or no support for symmetric cryptographic algorithms
-- Limited speed for cryptographic operations
+    - Low price (sub €100/unit)
+    - Portable
+    - Limited storage capability for key material (less than 20 RSA key-pairs)
+    - Limited or no support for symmetric cryptographic algorithms
+    - Limited speed for cryptographic operations
 
 3. Medium- to high-cost cryptographic accelerators (PCI cards/separate units)
 
-Characteristics of this category are:
+    Characteristics of this category are:
 
-- Medium to high price (€2500 – €30000 per unit)
-- Fixed location
-- Emphasis is on acceleration of cryptographic operations not on key storage (typical product names: “SSL accelerator” or “Crypto accelerator”, etc.)
-- High speed cryptographic operations both symmetric as well as asymmetric
+    - Medium to high price (€2500 – €30000 per unit)
+    - Fixed location
+    - Emphasis is on acceleration of cryptographic operations not on key storage (typical product names: “SSL accelerator” or “Crypto accelerator”, etc.)
+    - High speed cryptographic operations both symmetric as well as asymmetric
 
 4. Medium- to high-cost traditional hardware security modules (PCI cards/separate units)
 
-Characteristics of this category are:
+    Characteristics of this category are:
 
-- Medium to high price (€2500 – €30000 per unit)
-- Fixed location
-- Large storage capability for key material (thousands of RSA keys or more)
-- Cryptographic acceleration
+    - Medium to high price (€2500 – €30000 per unit)
+    - Fixed location
+    - Large storage capability for key material (thousands of RSA keys or more)
+    - Cryptographic acceleration
 
 Of these four types of HSMs, three types are suitable for use with OpenDNSSEC (types 1, 2, and 4). Type 3 HSMs (cryptographic accelerators) are less suited for use with OpenDNSSEC because they do not always provide the means to securely and efficiently store cryptographic key material.
 
@@ -181,23 +181,23 @@ The checklist below can help determine whether or not a HSM is suitable for use 
 
 ### Vendors
 
-- (AEP Networks)[http://www.aepnetworks.com/]
+- [AEP Networks](http://www.aepnetworks.com/)
   - Keyper
-- (Athena Smartcard Solutions)[http://www.athena-scs.com/]
+- [Athena Smartcard Solutions](http://www.athena-scs.com/)
   - IDProtect
-- (OpenSC)[http://www.opensc-project.org/]
+- [OpenSC](http://www.opensc-project.org/)
   - OpenSC PKCS#11 Provider
-- (Oracle)[http://www.oracle.com/]
+- [Oracle](http://www.oracle.com/)
   - Sun Crypto Accelerator 6000 (SCA/6000)
-- (RealSec)[http://www.realsec.com/]
+- [RealSec](http://www.realsec.com/)
   - Cryptosec LAN
-- (SafeNet)[http://www.safenet-inc.com/]
+- [SafeNet](http://www.safenet-inc.com/)
   - eToken PRO
   - Luna SA 4
   - Luna SA 5
   - Luna G5
-- (SmartCard-HSM)[http://www.smartcard-hsm.com/]
-- (Thales)[http://www.thales-esecurity.com/]
+- [SmartCard-HSM](http://www.smartcard-hsm.com/)
+- [Thales](http://www.thales-esecurity.com/)
   - nCshield Connect
-- (Utimaco)[http://www.utimaco.com/]
+- [Utimaco](http://www.utimaco.com/)
   - HSM-Series
