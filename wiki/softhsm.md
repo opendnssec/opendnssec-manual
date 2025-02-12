@@ -19,8 +19,7 @@ SoftHSM v1 is now no longer supported.
 
 ### SoftHSM v2
 
-It focuses on a higher level of security by encrypting sensitive information and using unswappable memory. There is also a more generalized crypto backend, where you can use Botan or OpenSSL.  
-Visit the [SoftHSM v2 page](softhsm2) for more information.
+It focuses on a higher level of security by encrypting sensitive information and using unswappable memory. There is also a more generalized crypto backend, where you can use Botan or OpenSSL. Visit the [SoftHSM v2 page](softhsm2.md) for more information.
 
 ### Pros and Cons
 
@@ -29,7 +28,7 @@ This list gives some of the arguments why or why not you should use SoftHSM in y
 Pros:
 
 1. No need for extra hardware devices.
-2. Much cheaper than propriatary hardware.
+2. Much cheaper than proprietary hardware.
 3. Can be used in an evaluation setup for OpenDNSSEC before the user might decide to invest in a real HSM.
 4. Open source code under BSD-license.
 

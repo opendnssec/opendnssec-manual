@@ -4,7 +4,7 @@ Although under the hood a lot has changed in OpenDNSSEC 2.0, the architecture an
 
 ### Upgrade OpenDNSSEC 1.4.10 to OpenDNSSEC 2.0
 
-With the rewrite of the ods-enforcerd daemon the database layout has changed as well. Upgrade scripts for Sqlite3 and MySQL are provided in the source tarball in ``enforcer/utils/1.4-2.0_db_convert``. See ("Migration from 1.4 to 2.1")[https://www.opendnssec.org/migration-from-1-4-to-2-1/] for more information. The text file README.md in that directory explains the process. Note: while 1.4 supplied scripts to convert from one database backend to the other, 2.0 does not have these yet. If you are planning to change database backend do that first before upgrading OpenDNSSEC.
+With the rewrite of the ods-enforcerd daemon the database layout has changed as well. Upgrade scripts for Sqlite3 and MySQL are provided in the source tarball in `enforcer/utils/1.4-2.0_db_convert`. See ["Migration from 1.4 to 2.1"](https://www.opendnssec.org/migration-from-1-4-to-2-1/) for more information. The text file README.md in that directory explains the process. Note: while 1.4 supplied scripts to convert from one database backend to the other, 2.0 does not have these yet. If you are planning to change database backend do that first before upgrading OpenDNSSEC.
 
 ### Perform an non-scheduled key rollover
 
@@ -12,11 +12,11 @@ OpenDNSSEC can perform a key rollover at any time. It does not matter if another
 
     ods-enforcer key rollover -z example.com -t ZSK 
 
-The next scheduled rollover (unless <ManualRollover/> set in the policy) for this key type will be offset from now. I.e the new key will be used for the full lifetime configured in the policy. Keys that are no longer desired are being phased out as soon as the policy tolerates and within the bounds of what are valid DNSSEC states. This means it is very well possible an already running rollover is never completed. Consequently if the lifetime of a key is very short, in the order of the TTL of the DNSKEY, it might be possible the Enforcer is never able to complete a rollover and the old key will be used indefinitely. This is considered a bad configuration.
+The next scheduled rollover (unless `<ManualRollover/>` set in the policy) for this key type will be offset from now. I.e the new key will be used for the full lifetime configured in the policy. Keys that are no longer desired are being phased out as soon as the policy tolerates and within the bounds of what are valid DNSSEC states. This means it is very well possible an already running rollover is never completed. Consequently if the lifetime of a key is very short, in the order of the TTL of the DNSKEY, it might be possible the Enforcer is never able to complete a rollover and the old key will be used indefinitely. This is considered a bad configuration.
 
 ### Change a policy configuration
 
-A zone is tied to a policy, and policies are described in kasp.xml in /etc/opendnssec. The 2.0 enforcer will store policy timing information per key in its database. As a result all TTL values can safely be changed without running the risk of a zone become bogus during a current or future rollover. In contrast, if one would shorten a TTL in 1.4 the next rollover has a change to be performed to quickly as the records would still be in cache with the old, long TTL. After editing the policy in kasp.xml one should issue a policy import and urge the Enforcer to see if there is any work to do on the zones.
+A zone is tied to a policy, and policies are described in `kasp.xml` in `/etc/opendnssec`. The 2.0 enforcer will store policy timing information per key in its database. As a result all TTL values can safely be changed without running the risk of a zone become bogus during a current or future rollover. In contrast, if one would shorten a TTL in 1.4 the next rollover has a change to be performed to quickly as the records would still be in cache with the old, long TTL. After editing the policy in kasp.xml one should issue a policy import and urge the Enforcer to see if there is any work to do on the zones.
 
     ods-enforcer policy import
     ods-enforcer enforce
@@ -25,7 +25,7 @@ There is no need to restart the enforcer. In fact, the KASP is not being read on
 
 ### Change the signing algorithm
 
-Changing the algorithm is no different than changing other policy parameters. Change the ``<Algorithm>`` field in the KASP (make sure to do this for both KSK and ZSK) and run policy import.
+Changing the algorithm is no different than changing other policy parameters. Change the `<Algorithm>` field in the KASP (make sure to do this for both KSK and ZSK) and run policy import.
 
     ods-enforcer policy import
     ods-enforcer enforce
