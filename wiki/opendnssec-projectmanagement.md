@@ -55,7 +55,7 @@ The first phase will firstly deliver a proof of concept. This will be various pi
 
 The second phase will deliver a version with somewhat richer features.
 
-**Excluding 
+**Excluding** 
 
 The third phase of OpenDNSSEC, and its future, is not part of this project plan. What the third phase of OpenDNSSEC consist of will be evaluated during the second phase of this project.
 
@@ -73,12 +73,12 @@ The work of this project is mainly depending on the most current RFCs from the I
 
 This collection of information is the result of a cooperation between the following parties:
 
-- (.SE)[http://www.iis.se/]
-- (John A Dickinson)[http://jadickinson.co.uk/]
-- (Kirei AB)[http://www.kirei.se/]
-- (NLNetLabs)[http://www.nlnetlabs.nl/]
-- (Nominet)[http://www.nominet.org.uk/]
-- (SURFnet)[http://www.surfnet.nl/en/]
+- [.SE](http://www.iis.se/)
+- [John A Dickinson](http://jadickinson.co.uk/)
+- [Kirei AB](http://www.kirei.se/)
+- [NLNet Labs](http://www.nlnetlabs.nl/)
+- [Nominet](http://www.nominet.org.uk/)
+- [SURF](http://www.surf.nl/)
 
 ## Use Cases
 
@@ -90,8 +90,8 @@ Two sets of use-cases are given, one for each phase of the project.
 
 The following diagrams show the use-cases covered by this phase:
 
-![assets/ZoneFileUseCasesA]  
-![assets/ZoneFileUseCasesB]
+![assets/ZoneFileUseCasesA](assets/ZoneFileUseCasesA.png)
+![assets/ZoneFileUseCasesB](assets/ZoneFileUseCasesB.png)
 
 **Actors**
 
