@@ -412,59 +412,23 @@ The aim with a SWOT analysis is to get a better view of the current situation of
 Different potential risks are presented here and are assigned a value depending on its consequence and probability. This helps us identify which risks are the main threats to our project. These risks are then further analysed in the next section.
 
 
-|----|-------------------------------------------------------|-------------|-------------|-------------|
-|  # | Risk                                                  | Consequence | Probability | Risk value  |
-|    |                                                       | 1-5         | 1-5         | C x P       |
-|----|-------------------------------------------------------|-------------|-------------|-------------|
-|  1 | No/few customers knows about our product when         |           3 |           4 |          12 |
-|  1 | the project is considered to be finished              |             |             |             |
-|----|-------------------------------------------------------|-------------|-------------|-------------|
-|  2 | Lack of time and resources                            |           4 |           3 |          12 |
-|----|-------------------------------------------------------|-------------|-------------|-------------|
-|  3 | Lack of knowledge                                     |           4 |           1 |           4 |
-|----|-------------------------------------------------------|-------------|-------------|-------------|
-|  4 | Key developers leaving the project                    |           4 |           2 |           8 |
-|----|-------------------------------------------------------|-------------|-------------|-------------|
-|  5 | Non-discloser of source code                          |           5 |           1 |           5 |
-|----|-------------------------------------------------------|-------------|-------------|-------------|
-|  6 | Unable to make a decision within the group            |           5 |           2 |          10 |
-|----|-------------------------------------------------------|-------------|-------------|-------------|
+| # | Risk                                                                                   | Consequence (1-5) | Probability (1-5) | Risk value (CxP) |
+|---|----------------------------------------------------------------------------------------|-------------------|-------------------|------------------|
+| 1 | No/few customers knows about our product when the project is considered to be finished | 3                 | 4                 | 12               |
+| 2 | Lack of time and resources                                                             | 4                 | 3                 | 12               |
+| 3 | Lack of knowledge                                                                      | 4                 | 1                 | 4                |
+| 4 | Key developers leaving the project                                                     | 4                 | 2                 | 8                |
+| 5 | Non-discloser of source code                                                           | 5                 | 1                 | 5                |
+| 6 | Unable to make a decision within the group                                             | 5                 | 2                 | 10               |
 
-|----|-----------------------------------|------------------------------------------|-----------|-------------|
-|  # | Risk                            | Management                               | Responsible | Finish      |
-|    |                                 |                                          |             | date        |
-|----|---------------------------------|------------------------------------------|-------------|-------------|
-|  1 | No/few customers knows about    | Make a marketing plan on how to let the  | Rickard     | February    |
-|    | our product when the project    | market know about our product            |             | 2009        |
-|    | is considered to be finished    |                                          |             |             |
-|----|---------------------------------|------------------------------------------|-------------|-------------|
-|  2 | Lack of time and resources      | Find out which resources this project    | Rickard     | January     |
-|    |                                 | has and how much they can commit to the  |             | 2009        |
-|    |                                 | project. Then plan the project according |             |             |
-|    |                                 | to this. If it still is not feasible,    |             |             |
-|    |                                 | then we have to look for other           |             |             |
-|    |                                 | participants.                            |             |             |
-|----|---------------------------------|------------------------------------------|-------------|-------------|
-|  3 | Lack of knowledge               | Each subproject must look at their       | Everyone    | January     |
-|    |                                 | requirements and make sure that they     |             | 2009        |
-|    |                                 | have the knowledge to be able to finish  |             |             |
-|    |                                 | their task. If this is not the case then |             |             |
-|    |                                 | a discussion must be made with the       |             |             |
-|    |                                 | project group.                           |             |             |
-|----|---------------------------------|------------------------------------------|-------------|-------------|
-|  4 | Key developers leaving          | All of our work must be documented and   | Everyone    | January     |
-|    | the project                     | published on our project web page. This  |             | 2009        |
-|    |                                 | also includes the source code.           |             |             |
-|----|---------------------------------|------------------------------------------|-------------|-------------|
-|  5 | Non discloser of source code    | All of the source code must be developed | Everyone    | January     |
-|    |                                 | and published under a BSD license.       |             | 2009        |
-|----|---------------------------------|------------------------------------------|-------------|-------------|
-|  6 | Unable to make a decision       | All project members have their right to  | Rickard     | January     |
-|    | within the group                | an opinion. All pros and cons are noted  |             | 2009        |
-|    |                                 | down and a voting is performed.          |             |             |
-|    |                                 | The project manager makes sure that a    |             |             |
-|    |                                 | decision isreached.                      |             |             |
-|----|---------------------------------|------------------------------------------|-------------|-------------|
+| # | Risk                                                                                   | Management                                                                                                                                                                                                 | Responsible | Finish date   |
+|---|----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|---------------|
+| 1 | No/few customers knows about our product when the project is considered to be finished | Make a marketing plan on how to let the market know about our product                                                                                                                                      | Rickard     | February 2009 |
+| 2 | Lack of time and resources                                                             | Find out which resources this project has and how much they can commit to the project Then plan the project according to this. If it still is not feasible, then we have to look for other participants.   | Rickard     | January 2009  |
+| 3 | Lack of knowledge                                                                      | Each subproject must look at their requirements and make sure that they have the knowledge to be able to finish their task. If this is not the case then a discussion must be made with the project group. | Everyone    | January 2009  |
+| 4 | Key developers leaving the project                                                     | All of our work must be documented and published on our project web page. This also includes the source code.                                                                                              | Everyone    | January 2009  |
+| 5 | Non-discloser of source code                                                           | All of the source code must be developed and published under a BSD license.                                                                                                                                | Everyone    | January 2009  |
+| 6 | Unable to make a decision within the group                                             | All project members have their right to an opinion. All pros and cons are noted down and a voting is performed. The project manager makes sure that a decision is reached.                                 | Rickard     | January 2009  |
 
 ## Project Management processes
 
