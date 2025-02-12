@@ -1,34 +1,3 @@
-## Meeting notes 2014
-
-2014-07
-2014-06-13
-2014-05-20
-2014-04-29
-2014-04-08
-2014-03-20
-2014-02-27/28 Developer workshop, London
-2014-02-14
-2014-01-30
-2014-01-14
-
-2014-01-14 Agenda - OpenDNSSEC Development - OpenDNSSEC-2.pdf
-2014-01-14 Agenda - OpenDNSSEC Development - OpenDNSSEC.pdf
-2014-01-30 Agenda - OpenDNSSEC Development - OpenDNSSEC.pdf
-2014-01-30 Minutes - OpenDNSSEC Development - OpenDNSSEC.pdf
-2014-02-14 Agenda - OpenDNSSEC Development - OpenDNSSEC.pdf
-2014-02-14 Minutes - OpenDNSSEC Development - OpenDNSSEC.pdf
-2014-03-20 Agenda - OpenDNSSEC Development - OpenDNSSEC.pdf
-2014-03-20 Minutes - OpenDNSSEC Development - OpenDNSSEC.pdf
-2014-04-08 Agenda - OpenDNSSEC Development - OpenDNSSEC.pdf
-2014-04-08 Minutes - OpenDNSSEC Development - OpenDNSSEC.pdf
-2014-04-29 Minutes - OpenDNSSEC Development - OpenDNSSEC.pdf
-2014-05-20 Agenda - OpenDNSSEC Development - OpenDNSSEC.pdf
-2014-05-20 Minutes - OpenDNSSEC Development - OpenDNSSEC.pdf
-2014-06-13 Agenda - OpenDNSSEC Development - OpenDNSSEC.pdf
-2014-06-13 Minutes - OpenDNSSEC Development - OpenDNSSEC.pdf
-2014-07-01 Agenda - OpenDNSSEC Development - OpenDNSSEC.pdf
-2014-07-01 Minutes - OpenDNSSEC Development - OpenDNSSEC.pdf
-
 
 ## Meeting notes 2011, 2012 and 2013.
 
@@ -37,7 +6,7 @@
   [minutes](meetings/Developer%20Workshop%20-%20Stockholm%20Dec%202013%20-%20Minutes%20-%20OpenDNSSEC%20Development%20-%20OpenDNSSEC.pdf)
 - 2013-12-02
   [agenda](meetings/2013-12-02%20Agenda%20-%20OpenDNSSEC%20Development%20-%20OpenDNSSEC.pdf)
-  (minutes)2013-12-02%20Minutes%20-%20OpenDNSSEC%20Development%20-%20OpenDNSSEC.pdf]
+  [minutes](2013-12-02%20Minutes%20-%20OpenDNSSEC%20Development%20-%20OpenDNSSEC.pdf)
 - 2013-11-21
   [agenda](meetings/2013-11-21%20Agenda%20-%20OpenDNSSEC%20Development%20-%20OpenDNSSEC.pdf)
   [minutes](meetings/2013-11-21%20Minutes%20-%20OpenDNSSEC%20Development%20-%20OpenDNSSEC.pdf)
