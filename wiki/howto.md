@@ -30,7 +30,6 @@ Changing the algorithm is no different than changing other policy parameters. Ch
     ods-enforcer policy import
     ods-enforcer enforce
 
-
 ### Clear all state and start over
 
 Suppose you are testing OpenDNSSEC in your environent and at some point want to reset is to be like a fresh installed instance. The main thing to do is run ods-enforcer-db-setup (after stopping OpenDNSSEC entirely). The Enforcer database is then clean and empty. We still need to files from /var to make sure the Signer isn't still using old data.
@@ -100,14 +99,14 @@ It is entirely possible to roll from a split key (KSK+ZSK) policy to a single ke
 The ``-p`` (or ``--parsable``) is added to ods-enforcer key list to aid processing and monitoring of the key states by an external process. key list -v and key list -d accept this flag. The information outputted and order remains the same.
 
     $ ods-enforcer key list -z example.com -d 2>/dev/null
-Keys:
-Zone:          Key role:   DS:       DNSKEY:      RRSIGDNSKEY:  RRSIG:       Pub:  Act:  Id:
-example.com    KSK         rumoured  omnipresent  omnipresent   NA           1     1     7a188b4177bed1a744c1bcb9aa4362cf
-example.com    ZSK         NA        omnipresent  NA            omnipresent  1     1     1c86793b7b779d935756906ec7fd28f7
- 
-$ ods-enforcer key list -z example.com -d -p 2>/dev/null
-example.com;KSK;rumoured;omnipresent;omnipresent;NA;1;1;7a188b4177bed1a744c1bcb9aa4362cf
-example.com;ZSK;NA;omnipresent;NA;omnipresent;1;1;1c86793b7b779d935756906ec7fd28f7
+    Keys:
+    Zone:          Key role:   DS:       DNSKEY:      RRSIGDNSKEY:  RRSIG:       Pub:  Act:  Id:
+    example.com    KSK         rumoured  omnipresent  omnipresent   NA           1     1     7a188b4177bed1a744c1bcb9aa4362cf
+    example.com    ZSK         NA        omnipresent  NA            omnipresent  1     1     1c86793b7b779d935756906ec7fd28f7
+    
+    $ ods-enforcer key list -z example.com -d -p 2>/dev/null
+    example.com;KSK;rumoured;omnipresent;omnipresent;NA;1;1;7a188b4177bed1a744c1bcb9aa4362cf
+    example.com;ZSK;NA;omnipresent;NA;omnipresent;1;1;1c86793b7b779d935756906ec7fd28f7
 
 ### Passing zones through OpenDNSSEC unsigned
 
@@ -136,11 +135,11 @@ If you are running OpenDNSSEC and want to change its used database backend there
 
 To accommodate step 3 we provided two scripts: ``convert_mysql_to_sqlite`` and ``convert_sqlite_to_mysql`` both located in ``enforcer/utils``.  Usages:
 
-> 1: usage: ./convert_mysql_to_sqlite -i DATABASE_MYSQL -o DATABASE_SQLITE [-h HOST] [-u USER] [-p PASSWORD]  
-> 2: usage: ./convert_sqlite_to_mysql -i DATABASE_SQLITE -o DATABASE_MYSQL [-h HOST] [-u USER] [-p PASSWORD]
+1. usage: `./convert_mysql_to_sqlite -i DATABASE_MYSQL -o DATABASE_SQLITE [-h HOST] [-u USER] [-p PASSWORD]`
+2. usage: `./convert_sqlite_to_mysql -i DATABASE_SQLITE -o DATABASE_MYSQL [-h HOST] [-u USER] [-p PASSWORD]`
 
 - DATBASE_MYSQL, Name of the MySQL database. Make sure you created the database beforehand.
 - DATABASE_SQLITE, Path of SQLite database file. Will overwrite existing file
--     HOST, USER, PASSWORD apply to the MySQL database. HOST will default to localhost.
+- HOST, USER, PASSWORD apply to the MySQL database. HOST will default to localhost.
 
 When creating a SQLite database make sure the resulting file is readable and writable for the user OpenDNSSEC runs as.
