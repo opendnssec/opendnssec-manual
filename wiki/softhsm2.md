@@ -1,7 +1,7 @@
 ## SoftHSM Documentation v2
 
-(SoftHSM)[http://www.opendnssec.org/softhsm/] is an implementation of a cryptographic store accessible through a PKCS#11 interface.
-It is being developed as a part of the OpenDNSSEC project.
+[SoftHSM](https://www.softhsm.org) is an implementation of a cryptographic store accessible through a PKCS#11 interface.
+It was originally developed as a part of the OpenDNSSEC project.
 
 The second version of SoftHSM focuses on a higher level of security by encrypting sensitive information and using unswappable memory. There is also a more generalized crypto backend, where you can use Botan or OpenSSL.
 
@@ -9,11 +9,7 @@ The second version of SoftHSM focuses on a higher level of security by encryptin
 
 Releases can be downloaded from:
 
-- <https://www.opendnssec.org/download/>
-
-Git repository:
-
-> https://www.opendnssec.org/download/
+- https://www.softhsm.org
 
 ### Dependencies
 
@@ -38,43 +34,43 @@ If the code is downloaded directly from the code repository, you have to prepare
 
 1. Configure the installation/compilation scripts.
 
-   > tar -xzf softhsm-<version>.tar.gz  
-   > cd softhsm-<version>  
-   > ./configure
+   tar -xzf softhsm-<version>.tar.gz  
+   cd softhsm-<version>  
+   ./configure
 
    Options:
 
-   > --disable-non-paged-memory  
-   >                         Disable non-paged memory for secure storage  
-   >                         (default enabled)  
-   > --disable-ecc           Disable support for ECC (default enabled)  
-   > --disable-gost          Disable support for GOST (default enabled)  
-   > --enable-visibility     Enable -fvisibility=hidden GCC flags so  
-   >                         only the PKCS#11 C_* entry points are kept  
-   > --with-crypto-backend   Select crypto backend (openssl|botan)  
-   > --with-openssl=PATH     Specify prefix of path of OpenSSL  
-   > --with-botan=PATH       Specify prefix of path of Botan  
-   > --with-loglevel=INT     The log level. 0=No log 1=Error 2=Warning 3=Info  
-   >                         4=Debug (default INT=3)  
-   > --with-migrate          Build the migration tool. Used when migrating  
-   >                         a SoftHSM v1 token database. Requires SQLite3.  
-   > --with-objectstore-backend-db  
-   >                         Build with database object store (SQLite3)  
-   > --with-sqlite3=PATH     Specify prefix of path of SQLite3  
+   --disable-non-paged-memory  
+                           Disable non-paged memory for secure storage  
+                           (default enabled)  
+   --disable-ecc           Disable support for ECC (default enabled)  
+   --disable-gost          Disable support for GOST (default enabled)  
+   --enable-visibility     Enable -fvisibility=hidden GCC flags so  
+                           only the PKCS#11 C_* entry points are kept  
+   --with-crypto-backend   Select crypto backend (openssl|botan)  
+   --with-openssl=PATH     Specify prefix of path of OpenSSL  
+   --with-botan=PATH       Specify prefix of path of Botan  
+   --with-loglevel=INT     The log level. 0=No log 1=Error 2=Warning 3=Info  
+                           4=Debug (default INT=3)  
+   --with-migrate          Build the migration tool. Used when migrating  
+                           a SoftHSM v1 token database. Requires SQLite3.  
+   --with-objectstore-backend-db  
+                           Build with database object store (SQLite3)  
+   --with-sqlite3=PATH     Specify prefix of path of SQLite3  
 
 2. Compile the source code using the following command:
 
-   > make
+   make
 
 3. Install the library using the follow command:
 
-   > sudo make install
+   sudo make install
 
 4. Location of the configuration file.
 
    The default location of the config file is /etc/softhsm2.conf. This location can be change by setting the environment variable.
 
-   > export SOFTHSM2_CONF=/home/user/config.file
+   export SOFTHSM2_CONF=/home/user/config.file
 
    Details on the configuration can be found in "man softhsm2.conf".
 
@@ -82,7 +78,7 @@ If the code is downloaded directly from the code repository, you have to prepare
 
    Use either softhsm-util or the PKCS#11 interface. The SO PIN can e.g. be used to re-initialize the token and the user PIN is handed out to the application so it can interact with the token.
 
-   > softhsm2-util --init-token --slot 0 --label "My token 1"
+   softhsm2-util --init-token --slot 0 --label "My token 1"
 
    Type in SO PIN and user PIN.  Once a token has been initialized, more slots will be added automatically with a new uninitialized token.
 

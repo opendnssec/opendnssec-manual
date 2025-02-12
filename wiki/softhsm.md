@@ -1,9 +1,9 @@
 ## SoftHSM
 
-[SoftHSM](http://www.opendnssec.org/softhsm/) is an implementation of a cryptographic store accessible through a PKCS#11 interface.
-It was developed as a part of the OpenDNSSEC project.
+[SoftHSM](https://www.softhsm.org) is an implementation of a cryptographic store accessible through a PKCS#11 interface.
+It was originally developed as a part of the OpenDNSSEC project.
 
-- <http://www.opendnssec.org/softhsm/>
+- <https://www.softhsm.org>
 
 ### Background
 
