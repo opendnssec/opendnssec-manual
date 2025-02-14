@@ -49,9 +49,9 @@ Here:
 
 The relationship between these elements is shown below. 
 
-![Signatures lifetimes](assets/signature-lifetime.png)
+![Signatures lifetimes](../assets/signature-lifetime.png)
 
-![Re-usage of signatures](assets/reuse-of-signatures.png)
+![Re-usage of signatures](../assets/reuse-of-signatures.png)
 
 ### Authenticated Denial of Existence
 
