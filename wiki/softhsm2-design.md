@@ -10,7 +10,7 @@ Below is a description of all the components shown in the diagram.
 
 #### PKCS#11 interface
 
-The (PKCS#11)[pkcs11] interface (dark orange, at the top) is just that: an implementation of the PKCS#11 interface version 2.30. It is the only interface layer that SoftHSM v2 exposes to the outside world. All calls from outside the library enter here and are passed on to the other components that make up SoftHSM v2.
+The `PKCS#11` interface (dark orange, at the top) is just that: an implementation of the PKCS#11 interface version 2.30. It is the only interface layer that SoftHSM v2 exposes to the outside world. All calls from outside the library enter here and are passed on to the other components that make up SoftHSM v2.
 
 #### Initialisation and configuration
 
@@ -63,7 +63,7 @@ There should be clearly defined interfaces between some of the main components i
 
 ### Module testing
 
-SoftHSM v2 will incorporate module tests for each component at the interface level of the interfaces specified above; these tests are implemented using the (CPPunit test framework)[http://cppunit.sourceforge.net/].
+SoftHSM v2 will incorporate module tests for each component at the interface level of the interfaces specified above; these tests are implemented using the [CPPunit test framework](http://cppunit.sourceforge.net/).
 
 ### Design verification
 
@@ -73,7 +73,7 @@ To verify the design, we have performed a detailed analysis of two use cases and
 
 This use case describes the steps taken internally within SoftHSM v2 to initialise a token when a caller of the library calls C_InitToken.
 
-!(Sequence diagram)[assets/inittoken.png]
+![Sequence diagram](assets/inittoken.png)
 
 Steps in the sequence diagram:
 
@@ -115,5 +115,5 @@ Steps in the sequence diagram:
 
 This use case describes the steps taken within SoftHSM v2 to sign some data using a key stored on a SoftHSM v2 token.
 
-!(Sequence diagram)[assets/signdata.png]
+![Sequence diagram](assets/signdata.png)
 
