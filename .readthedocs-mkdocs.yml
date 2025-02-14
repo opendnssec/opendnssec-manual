@@ -45,7 +45,7 @@ nav:
     - 'softhsm.md'
     - 'SoftHSM v2': 'softhsm2.md'
     - 'Design': 'softhsm2-design.md'
-    - 'Requiremens': 'softhsm-requirements.md'
+    - 'Requirements': 'softhsm-requirements.md'
     - 'SoftHSM v1 (deprecated)': 'softhsm1.md'
   - 'Configuration guide':
     - 'configuration.md'
