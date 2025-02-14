@@ -923,15 +923,15 @@ The signer outputs some statistics into the logs:
 
     [STATS] opendnssec.org RR[count=32 time=1(sec)] NSEC[count=32 time=1(sec)] RRSIG[new=1 reused=31 time=1(sec) avg=1(sig/sec)] AUDIT[time=2(sec)] TOTAL[time=5(sec)]
 
-The RR[...] block says something about reading the unsigned zone file. The line above tells us that there have been 32 RRs read and it took about one second. The count will be 0 on lines were only re-signing occurred.
+The `RR[...]` block says something about reading the unsigned zone file. The line above tells us that there have been 32 RRs read and it took about one second. The count will be 0 on lines were only re-signing occurred.
 
-The NSEC[...] block says something about the number of NSEC or NSEC3 records created on the latest run. This count will also be 0 on lines were only re-signing occurred.
+The `NSEC[...]` block says something about the number of NSEC or NSEC3 records created on the latest run. This count will also be 0 on lines were only re-signing occurred.
 
-The RRSIG[...] block says something about the number of created signatures. In the above example, the last time there was only created one new signature, and 31 other signatures were reused. The re-signing was finished in about a second and thus the average number of signatures created per second is in this example 1.
+The `RRSIG[...]` block says something about the number of created signatures. In the above example, the last time there was only created one new signature, and 31 other signatures were reused. The re-signing was finished in about a second and thus the average number of signatures created per second is in this example 1.
 
-The AUDIT[...] block tells us how long the auditor needed to check upon the zone.
+The `AUDIT[...]` block tells us how long the auditor needed to check upon the zone.
 
-The TOTAL[...] block tells us how long the re-signing took, including reading the unsigned zone and adding NSEC(3) records, if applicable.
+The `TOTAL[...]` block tells us how long the re-signing took, including reading the unsigned zone and adding NSEC(3) records, if applicable.
 
 #### Troubleshooting
 
