@@ -69,8 +69,8 @@ New or changed requirements are marked with __new__ and __changed__.
 - When designing and implementing SoftHSM v2 secure coding guidelines and design principles shall be applied. __new__
 
 The applicable secure coding standards are:  
-The (CERT C Secure Coding Standard)[https://www.securecoding.cert.org/confluence/display/seccode/CERT+C+Secure+Coding+Standard] and  
-The (CERT C++ Secure Coding Standard)[https://www.securecoding.cert.org/confluence/pages/viewpage.action?pageId=637].
+The [CERT C Secure Coding Standard](https://www.securecoding.cert.org/confluence/display/seccode/CERT+C+Secure+Coding+Standard) and 
+The [CERT C++ Secure Coding Standard](https://www.securecoding.cert.org/confluence/pages/viewpage.action?pageId=637).
 
 #### Algorithms
 
