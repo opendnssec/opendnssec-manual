@@ -12,7 +12,7 @@ Each XML file starts with a standard element `<?xml...`. As with any XML file, c
        ...
     </Configuration>
 
-The enclosing element of the XML file is the element <Configuration> which, with the closing element </Configuration>, brackets the configuration information.
+The enclosing element of the XML file is the element `<Configuration>` which, with the closing element `</Configuration>`, brackets the configuration information.
 
 ### Repositories
 
@@ -52,12 +52,12 @@ As indicated, any number of repositories can be specified in the configuration f
 
 (The example above is commented out by the XML comment delimiters.)
 
-- ``<Repository>`` - the definition of a repository is bracketed by the <Repository> and </Repository> elements. The name attribute must be supplied and must be unique. It is this name that is used in the kasp.xml file to identify which repository holds the keys. This field is limited to 30 characters.
-- ``<Module>`` identifies the dynamic-link library that controls the repository. Each type of HSM will have its own library.
-- ``<TokenLabel>`` identifies the "token" within the HSM that is being used - essentially a form of sub-repository. The token label is also used where there are two repositories of the same type, in that each repository should contain a different token label sub-repository. OpenDNSSEC will automatically go to the right HSM based on this. This field is limited to 32 characters.
-- ``<PIN>`` is an optional element containing the password to the HSM. OpenDNSSEC have this stored en-claire in the configuration file. If the PIN is not present in the configuration file, then it must be entered by using the command ods-hsmutil login.
-- ``<RequireBackup>`` is an optional element that specifies that keys from this repository may not be used until they are backed up. If backup has been done, then use ods-enforcer backup commit to notify OpenDNSSEC about this. The backup notification is needed for OpenDNSSEC to be able to complete a key rollover. (If the backup is not done then the old key will remain in use.)
-- ``<SkipPublicKey>`` is an optional element which specifies that the public key objects should not be stored or handled in the HSM. The public key is needed in order to create the DNSKEY RR. In theory, the public part of the key is also available in the private key object. However, the PKCS#11 API does not require the HSM to behave in this way. We have not seen a HSM where we cannot do this, but you should remove this flag if you are having any problem with it. The benefit of adding this flag is that you save space in your HSM, because you are only storing the private key object.
+- `<Repository>` - the definition of a repository is bracketed by the `<Repository>` and `</Repository>` elements. The name attribute must be supplied and must be unique. It is this name that is used in the kasp.xml file to identify which repository holds the keys. This field is limited to 30 characters.
+- `<Module>` identifies the dynamic-link library that controls the repository. Each type of HSM will have its own library.
+- `<TokenLabel>` identifies the "token" within the HSM that is being used - essentially a form of sub-repository. The token label is also used where there are two repositories of the same type, in that each repository should contain a different token label sub-repository. OpenDNSSEC will automatically go to the right HSM based on this. This field is limited to 32 characters.
+- `<PIN>` is an optional element containing the password to the HSM. OpenDNSSEC have this stored en-claire in the configuration file. If the PIN is not present in the configuration file, then it must be entered by using the command ods-hsmutil login.
+- `<RequireBackup>` is an optional element that specifies that keys from this repository may not be used until they are backed up. If backup has been done, then use ods-enforcer backup commit to notify OpenDNSSEC about this. The backup notification is needed for OpenDNSSEC to be able to complete a key rollover. (If the backup is not done then the old key will remain in use.)
+- `<SkipPublicKey>` is an optional element which specifies that the public key objects should not be stored or handled in the HSM. The public key is needed in order to create the DNSKEY RR. In theory, the public part of the key is also available in the private key object. However, the PKCS#11 API does not require the HSM to behave in this way. We have not seen a HSM where we cannot do this, but you should remove this flag if you are having any problem with it. The benefit of adding this flag is that you save space in your HSM, because you are only storing the private key object.
 
 ### Common
 
@@ -126,9 +126,9 @@ Other Enforcer Parameters:
 
 This will make it possible to create a fully automatic KSK rollover, where OpenDNSSEC feed your program/script on stdin with the current set of DNSKEYs that we want to have in the parent as DS RRs.
 
-__Key Identifier__: If the command defined here ends with " --cka_id" then that will be stripped off the command and "; <CKA_ID>" will be added to the output.
+__Key Identifier__: If the command defined here ends with ` --cka_id` then that will be stripped off the command and `; <CKA_ID>` will be added to the output.
 
-An example script for the <DelegationSignerSubmitCommand> command is available: which is a simple mail script (from 1.4 the eppclient is no longer supported). Remember that the ods-enforcer key ds-seen must be given in order to complete the rollover. This should only be done when the new DS RRs are available on the parents public nameservers.
+An example script for the `<DelegationSignerSubmitCommand>` command is available: which is a simple mail script (from 1.4 the eppclient is no longer supported). Remember that the ods-enforcer key ds-seen must be given in order to complete the rollover. This should only be done when the new DS RRs are available on the parents public nameservers.
 
 <Signer>
         <Privileges>

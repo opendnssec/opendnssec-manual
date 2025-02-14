@@ -78,7 +78,7 @@ After this you must instruct the Enforcer to reread the policy and reevaluate th
 
 ### Use a single key as ZSK and KSK
 
-New in OpenDNSSEC 2.0 is the support for CSK's (Combined Signing Key) Which take the role of KSK and ZSK. Its configuration is exactly like that of the other types but uses the <CSK> tag in the KASP.
+New in OpenDNSSEC 2.0 is the support for CSK's (Combined Signing Key) Which take the role of KSK and ZSK. Its configuration is exactly like that of the other types but uses the `<CSK>` tag in the KASP.
 
     <Keys>
         <TTL>PT3600S</TTL>

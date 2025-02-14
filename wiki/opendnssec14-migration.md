@@ -33,29 +33,29 @@ If you upgrade OpenDNSSEC from 1.3 or lower to 1.4 or higher, and you used the z
 
 #### Changes in conf.xml
 
-In 1.3 and earlier, the zone fetcher configuration filename had to be specified in conf.xml in the <ZoneFetchFile> element. In version 1.4, this element must be removed.
+In 1.3 and earlier, the zone fetcher configuration filename had to be specified in conf.xml in the `<ZoneFetchFile>` element. In version 1.4, this element must be removed.
 
-In 1.3 and earlier, the zonefetch.xml file contains an element <NotifyListen>: this defines which interface and port the system must bind to listen NOTIFY messages on. For example, to let the zone fetcher listen on the IPv4 address 192.0.2.100 on port 53, you would have configured the zone fetcher like this:
+In 1.3 and earlier, the zonefetch.xml file contains an element `<NotifyListen>`: this defines which interface and port the system must bind to listen NOTIFY messages on. For example, to let the zone fetcher listen on the IPv4 address 192.0.2.100 on port 53, you would have configured the zone fetcher like this:
 
 > ...
 >     <NotifyListen>
 >         <IPv4>192.0.2.100</IPv4><Port>53</Port>
 >     </NotifyListen>
 
-With OpenDNSSEC 1.4, the signer can listen to more than NOTIFY messages. It also accepts zone transfer requests and 'regular queries' like SOA, DNSKEY, and so on. The listener becomes more general and therefore the configuration now goes in conf.xml, under the <Signer> element:
+With OpenDNSSEC 1.4, the signer can listen to more than NOTIFY messages. It also accepts zone transfer requests and 'regular queries' like SOA, DNSKEY, and so on. The listener becomes more general and therefore the configuration now goes in conf.xml, under the `<Signer>` element:
 
 > ...
 >     <Listener>
 >         <Interface><Address>192.0.2.100</Address><Port>53</Port></Interface>
 >     </Listener>
 
-Instead of <NotifyListen>, the element name is made more general and is now called <Listener>. There is an additional element <Interface> to indicate this describes an interface and to support multiple listening interfaces. The configuration does not need different elements for IPv4 and IPv6 anymore, so also for an IPv6 address you would use the <Address> element. The <Port> element remains unchanged.
+Instead of `<NotifyListen>`, the element name is made more general and is now called `<Listener>`. There is an additional element `<Interface>` to indicate this describes an interface and to support multiple listening interfaces. The configuration does not need different elements for IPv4 and IPv6 anymore, so also for an IPv6 address you would use the `<Address>` element. The `<Port>` element remains unchanged.
 
 #### From zonefetch.xml to addns.xml
 
-In 1.3 and earlier, all the zone fetcher configuration (except the <NotifyListen>) is encapsulated within the elements <Zonefetch><Default>. In 1.4, the DNS adapter configuration is encapsulated in <Adapter><DNS>. The <TSIG> part is unchanged and can be copied straightforward.
+In 1.3 and earlier, all the zone fetcher configuration (except the `<NotifyListen>`) is encapsulated within the elements `<Zonefetch><Default>`. In 1.4, the DNS adapter configuration is encapsulated in `<Adapter><DNS>`. The `<TSIG>` part is unchanged and can be copied straightforward.
 
-Because the zone fetcher only was able to do inbound zone transfers, the <RequestTransfer> element was immediately listed under the <Default> element. The DNS Adapter configuration is for both inbound and outbound zone transfers, so it should now be encapsulated within the <Inbound> element. Again, suppose you had the following configuration in zonefetch.xml:
+Because the zone fetcher only was able to do inbound zone transfers, the `<RequestTransfer>` element was immediately listed under the `<Default>` element. The DNS Adapter configuration is for both inbound and outbound zone transfers, so it should now be encapsulated within the `<Inbound>` element. Again, suppose you had the following configuration in zonefetch.xml:
 
 > <Zonefetch>
 >     ...
@@ -92,6 +92,6 @@ You would have to translate that into the following configuration in addns.xml:
 >     </DNS>
 > </Adapter>
 
-The <IPv4> element is renamed to <Address> again, which is IP version independent. <Port> and <Key> remains unchanged. The three elements are encapsulated into the element <Remote>, so that multiple remote zone transfer sources can be configured.
+The `<IPv4>` element is renamed to `<Address>` again, which is IP version independent. `<Port>` and `<Key>` remains unchanged. The three elements are encapsulated into the element `<Remote>`, so that multiple remote zone transfer sources can be configured.
 
 That's it! In the DNS adapter configuration you can now also configure from which sources you allow NOTIFY messages and you can configure outbound zone transfers. For more information on that, see the documentation on addns.xml.

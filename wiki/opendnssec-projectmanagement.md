@@ -568,12 +568,12 @@ There are two different numbering schemes in use, one scheme for binaries and an
 
 For earlier releases a component based numbering scheme was used (listed at the bottom of the page for reference). From 1.4.0 and 1.3.14 onwards OpenDNSSEC will switch to using an API based versioning scheme as described here: 
 
-Releases are numbered using the following scheme: <name>-<major>.<minor>.<patch>. We base our scheme on that described by http://semver.org/ which summarises to:
+Releases are numbered using the following scheme: `<name>-<major>.<minor>.<patch>`. We base our scheme on that described by http://semver.org/ which summarises to:
 
--  <name> - The name of the software, e.g. opendnssec or softhsm.
--  <major> - Backwards incompatible changes must increase the major version.
--  <minor> - New, backwards compatible functionality, deprecated functionality (while maintaining backwards compatibility), or substantial new functionality within private code.
--  <patch> - Backwards compatible bug fixes or new, backwards compatible command line utility options (that will not change the behaviour for existing options).
+-  `<name>` - The name of the software, e.g. opendnssec or softhsm.
+-  `<major>` - Backwards incompatible changes must increase the major version.
+-  `<minor>` - New, backwards compatible functionality, deprecated functionality (while maintaining backwards compatibility), or substantial new functionality within private code.
+-  `<patch>` - Backwards compatible bug fixes or new, backwards compatible command line utility options (that will not change the behaviour for existing options).
 
 Pre-releases have one of the following suffixes appended to the above. They are described more in detail in a section below.
 
@@ -609,12 +609,12 @@ SoftHSM 1.3 released on August 2011 was supported until 1 year after its last LT
 
 #### Versioning scheme used for early versions of OpenDNSSEC (pre 1.3.14)
 
-Numbering of binaries: Releases were numbered using the following scheme: <name>-<major>.<minor>.<patch>
+Numbering of binaries: Releases were numbered using the following scheme: `<name>-<major>.<minor>.<patch>`
 
-- <name> - The name of the software, e.g. opendnssec or softhsm.
-- <major> - Indicate changes in the overall system design.
-- <minor> - Indicate changes in the components.
-- <patch> - Indicate bug fixes. 
+- `<name>` - The name of the software, e.g. opendnssec or softhsm.
+- `<major>` - Indicate changes in the overall system design.
+- `<minor>` - Indicate changes in the components.
+- `<patch>` - Indicate bug fixes. 
 
 ### Release check list
 

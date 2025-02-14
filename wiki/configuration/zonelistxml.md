@@ -9,11 +9,11 @@ Since OpenDNSSEC 2.0 zones should be added and deleted using the commandline int
         ...
     </ZoneList>
 
-Each XML file starts with a standard element "<?xml...". As with any XML file, comments are included between the delimiters "<!–" and "–>". The enclosing element of the XML file is the element <ZoneList> which, with the closing element </ZoneList>, brackets the list of zones.
+Each XML file starts with a standard element `<?xml...`. As with any XML file, comments are included between the delimiters `<!–-` and `-–>`. The enclosing element of the XML file is the element `<ZoneList>` which, with the closing element `</ZoneList>`, brackets the list of zones.
 
 ### Zone specification
 
-Each zone is defined by a <Zone> element:
+Each zone is defined by a `<Zone>` element:
 
     <Zone name="example.com">
         ...
@@ -25,11 +25,11 @@ The mandatory attribute "name" identifies the zone. Each zone within the zone li
 
     <Policy>default</Policy>
 
-The first element of the <Zone> tag is <Policy>, which identifies the policy used to sign the file. Policies are defined in the kasp.xml file, and the name in this element must be that of one of the defined policies.
+The first element of the `<Zone>` tag is `<Policy>`, which identifies the policy used to sign the file. Policies are defined in the kasp.xml file, and the name in this element must be that of one of the defined policies.
 
 ### Configuration
 
-Information from the Enforcer to the Signer Engine is passed via a special signer configuration file, the name of which is given by the <SignerConfiguration> section of the zone definition:
+Information from the Enforcer to the Signer Engine is passed via a special signer configuration file, the name of which is given by the `<SignerConfiguration>` section of the zone definition:
 
     <SignerConfiguration>/var/opendnssec/signconf/example.com.xml</SignerConfiguration>
 

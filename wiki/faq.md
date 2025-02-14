@@ -31,10 +31,10 @@
     In the following scenarios the content of the currently signed may be updated by OpenDNSSEC:
 
     1. a key rollover is happening
-    2. the signer configuration has changed in an other way (the enforcer will issue an ods-signer update <zone> command)
+    2. the signer configuration has changed in an other way (the enforcer will issue an ods-signer update `<zone>` command)
     3. the signatures are too old and need to be refreshed, the signer will resign the current zone.
 
-    Normally the signer would increment the serial in the signed zone in these cases. However for the specific case where the configuration specifies the "keep" option for the <Serial> value and the serial in the unsigned zone has not been incremented then the signer is blocked from updating the serial and these log messages will be generated.
+    Normally the signer would increment the serial in the signed zone in these cases. However for the specific case where the configuration specifies the "keep" option for the `<Serial>` value and the serial in the unsigned zone has not been incremented then the signer is blocked from updating the serial and these log messages will be generated.
 
 
 ??? "I am using a Sun Crypto Accelerator (SCA) 6000 under Linux and all HSM operations fail with CKR_HOST_MEMORY"

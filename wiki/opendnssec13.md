@@ -320,12 +320,12 @@ Each XML file starts with a standard element "<?xml...". As with any XML file, c
 
     <KASP>
 
-The enclosing element of the XML file is the element <KASP> which, with the closing element </KASP>, brackets one or more policies.
+The enclosing element of the XML file is the element `<KASP>` which, with the closing element `</KASP>`, brackets one or more policies.
 
     ...
         <Policy name="default">
 
-Each policy is included in the <Policy>...</Policy> elements. Each policy has a "name" attribute giving the name of the policy. The name is used to link a policy and the zones signed using it; each policy must have a unique name.
+Each policy is included in the `<Policy>...</Policy>` elements. Each policy has a "name" attribute giving the name of the policy. The name is used to link a policy and the zones signed using it; each policy must have a unique name.
 
 The policy named "default" is special, as it is associated with all zones that do not have a policy explicitly associated with them.
 
@@ -352,11 +352,11 @@ The next section of the file is the Signatures section, which lists the paramete
 
 Here:
 
-- <Resign> is the re-sign interval, which is the interval between runs of the Signer Engine.
-- <Refresh> is the refresh interval, detailing when a signature should be refreshed. As signatures are typically valid for much longer than the interval between runs of the signer, there is no need to re-generate the signatures each time the signer is run if there is no change to the data being signed. The signature will be refreshed when the time until the signature expiration is closer than the refresh interval. Set it to zero if you want to refresh the signatures each re-sign interval.
-- <Validity> groups two elements of information related to how long the signatures are valid for - <Default> is the validity interval for all RRSIG records except those related to NSEC or NSEC3 records. In this case, the validity period is given by the value in the <Denial> element.
-- <Jitter> is the value added to or extracted from the expiration time of signatures to ensure that not all signatures expire at the same time. The actual value of the <Jitter> element is the -j + r %2j, where j is the jitter value and r a random duration, uniformly ranging between -j and j, is added to signature validity period to get the signature expiration time.
-- <InceptionOffset> is a duration subtracted from the time at which a record is signed to give the start time of the record. This is required to allow for clock skew between the signing system and the system on which the signature is checked. Without it, the possibility exists that the checking system could retrieve a signature whose start time is later than the current time.
+- `<Resign>` is the re-sign interval, which is the interval between runs of the Signer Engine.
+- `<Refresh>` is the refresh interval, detailing when a signature should be refreshed. As signatures are typically valid for much longer than the interval between runs of the signer, there is no need to re-generate the signatures each time the signer is run if there is no change to the data being signed. The signature will be refreshed when the time until the signature expiration is closer than the refresh interval. Set it to zero if you want to refresh the signatures each re-sign interval.
+- `<Validity>` groups two elements of information related to how long the signatures are valid for - `<Default>` is the validity interval for all RRSIG records except those related to NSEC or NSEC3 records. In this case, the validity period is given by the value in the `<Denial>` element.
+- `<Jitter>` is the value added to or extracted from the expiration time of signatures to ensure that not all signatures expire at the same time. The actual value of the `<Jitter>` element is the -j + r %2j, where j is the jitter value and r a random duration, uniformly ranging between -j and j, is added to signature validity period to get the signature expiration time.
+- `<InceptionOffset>` is a duration subtracted from the time at which a record is signed to give the start time of the record. This is required to allow for clock skew between the signing system and the system on which the signature is checked. Without it, the possibility exists that the checking system could retrieve a signature whose start time is later than the current time.
 
 The relationship between these elements is shown below. 
 
@@ -365,7 +365,7 @@ The relationship between these elements is shown below.
 
 **Authenticated Denial of Existence**
 
-Authenticated denial of existence - proving that domain names do not exist in the zone - is handled by the <Denial> section, as shown below:
+Authenticated denial of existence - proving that domain names do not exist in the zone - is handled by the `<Denial>` section, as shown below:
 
     ...
         <Denial>
@@ -381,7 +381,7 @@ Authenticated denial of existence - proving that domain names do not exist in th
             </NSEC3>
         </Denial>
 
-<Denial> includes one element, either <NSEC3> (as shown above) or <NSEC>.
+`<Denial>` includes one element, either `<NSEC3>` (as shown above) or `<NSEC>`.
 
 NSEC3:
 
@@ -727,7 +727,7 @@ Your zone will be signed, once you have setup the system and started it. When yo
     example.com                     KSK           ready     waiting for ds-seen       9621ca39306ce050e8dd94c5ab837001  softHSM1                          22499
 
 1. Export the public key either as DNSKEY or DS, depending on what format your parent zone wants it in. See the section Export the public keys, on how to get the key information.
-   This step can be automated or semi-automated by placing a command in the <DelegationSignerSubmitCommand> tag. This should point to a binary which will accept the required key(s) as DNSKEY RRs on STDIN.
+   This step can be automated or semi-automated by placing a command in the `<DelegationSignerSubmitCommand>` tag. This should point to a binary which will accept the required key(s) as DNSKEY RRs on STDIN.
 2. Notify the Enforcer when you can see the DS RR in your parent zone. You usually give the keytag to the Enforcer, but if there are KSKs with the same keytag then use the CKA_ID.
     ods-ksmutil key ds-seen -z example.com -x 22499
    or
@@ -860,7 +860,7 @@ The stages are:
         Mar 16 11:39:05 sion ods-enforcerd: Once the new DS records are seen in DNS please issue the ds-seen command for zone example.com with the following cka_ids, 04260cd6eac67280cd2dea94c6e38cb7
 
    The DNSKEY or DS RR can also be retrieved by using the commands in the section Export the public keys. 
-    This step can be automated or semi-automated by placing a command in the <DelegationSignerSubmitCommand> tag. This should point to a binary which will accept the required key(s) as DNSKEY RRs on STDIN.
+    This step can be automated or semi-automated by placing a command in the `<DelegationSignerSubmitCommand>` tag. This should point to a binary which will accept the required key(s) as DNSKEY RRs on STDIN.
 
 2. When the records indicated have been seen in DNS then this can be communicated to OpenDNSSEC with the ds-seen command as indicated:
 
@@ -879,7 +879,7 @@ The stages are:
 
 Key rollovers on exact dates
 
-Some users want to have more control over their key rollovers and roll keys on exact dates, for example the first day of each month. To do this you need to specify that you want manual key rollovers in the kasp.xml configuration. Add the <ManualRollover/> tag to the type and key you want to roll manually.
+Some users want to have more control over their key rollovers and roll keys on exact dates, for example the first day of each month. To do this you need to specify that you want manual key rollovers in the kasp.xml configuration. Add the `<ManualRollover/>` tag to the type and key you want to roll manually.
 
 When this is done you can add the rollover commands to a cron job, with a command like this:
 
@@ -941,29 +941,29 @@ The following are log messages which you may see, and what to do about them (if 
 
 **Enforcer**
 
-??? ods-enforcerd: ERROR: Trying to make non-backed up ZSK active when RequireBackup flag is set 
+??? "ods-enforcerd: ERROR: Trying to make non-backed up ZSK active when RequireBackup flag is set"
      This is not an error as such. It means that in conf.xml you have indicated that keys should not be used unless they are backed up. However, the enforcer has determined that if it continues then a non backed up key will be made active.  
      The solution Take a backup of your keys (how this is done will depend on your key storage).  
       Once this has been done then run ods-ksmutil backup done to mark all keys as having been backed up. 
 
-??? ods-enforcerd: WARNING: Making non-backed up KSK active, PLEASE make sure that you know the potential problems of using keys which are not recoverable 
+??? "ods-enforcerd: WARNING: Making non-backed up KSK active, PLEASE make sure that you know the potential problems of using keys which are not recoverable"
     This is the same as above, but without RequireBackup being set in conf.xml 
 
-??? ods-enforcerd: WARNING: key rollover not completed as there are no keys in the ready state: ods-enforcerd will try again when it runs next
+??? "ods-enforcerd: WARNING: key rollover not completed as there are no keys in the ready state: ods-enforcerd will try again when it runs next"
     This is seen when a rollover is happening but there is no replacement key ready (because one has not been published for long enough). It indicates that the rollover will be delayed until the replacement key is ready, the time that this will happen depends on the policy.
 
-??? ods-enforcerd: Could not call signer engine 
+??? "ods-enforcerd: Could not call signer engine"
      If the enforcer makes a change to a zones signer configuration (say it adds a new key) it calls the signer to get it to resign that zone. This message indicates that the signer is not running, although it has been seen on a system where everything is working fine. (See KNOWN_ISSUES.)
 
-??? ods-enforcerd: Not enough keys to satisfy zsk policy for zone 
+??? "ods-enforcerd: Not enough keys to satisfy zsk policy for zone"
     One of these messages will be seen if the enforcer does not have enough unallocated keys to provide for the zone specified. If the ManualKeyGeneration tag is set in conf.xml then you will need to create new keys using ods-ksmutil key generate, otherwise new keys will be created when the enforcer runs next. (Don't forget to backup any new keys.)
 
-??? ods-enforcerd: Rollover of KSK expected at <DATE TIME> for <ZONE> 
+??? "ods-enforcerd: Rollover of KSK expected at `<DATE TIME>` for `<ZONE>`"
     This is not an error, but a notification of an upcoming (scheduled) rollover. This will appear in your logs at a time prior to the rollover as configured in conf.xml (theEnforcer/RolloverNotification tag).
 
-??? ods-enforcerd: WARNING: KSK Retirement reached; please submit the new DS for `<ZONE>` and use ods-ksmutil key ksk-roll to roll the key. 
+??? "ods-enforcerd: WARNING: KSK Retirement reached; please submit the new DS for `<ZONE>` and use ods-ksmutil key ksk-roll to roll the key."
      Rolling a KSK requires the DS record of the replacement key to be published in the parent of the zone. This message indicates that your KSK has reached the end of its life (as specified by your policy), and that it is time to submit the DS record to the parent.
 
-??? ods-enforcerd: Error: database in config file `<path_to_conf.xml>` does not match libksm 
+??? "ods-enforcerd: Error: database in config file `<path_to_conf.xml>` does not match libksm"
     This indicates that either you have libksm built for sqlite, but have specified a MySQL database in conf.xml, or vice versa.  
     The solution is to either rebuild libksm or to change conf.xml
