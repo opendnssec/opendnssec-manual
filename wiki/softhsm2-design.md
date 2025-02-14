@@ -4,7 +4,7 @@
 
 The diagram shows the design overview of SoftHSM v2 and its constituent components.
 
-![assets/highleveldesign.png]
+![High level design](assets/highleveldesign.png)
 
 Below is a description of all the components shown in the diagram.
 
