@@ -97,9 +97,9 @@ A token can be backed up by issuing the command:
 
     sqlite3 <PATH TO YOUR TOKEN> ".backup copy.db"
 
-Copy the "copy.db" to a secure location. To restore the token, just copy the file back to the system and add it to a slot in the file softhsm.conf.
+Copy the `copy.db` to a secure location. To restore the token, just copy the file back to the system and add it to a slot in the file softhsm.conf.
 
-If you are using SQLite3 version < 3.6.11, then you have to use the command below. But it will not copy the "PRAGMA user_version", which is used by SoftHSM for versioning. So you have to do that manually. In this case the version number is 100.
+If you are using SQLite3 version < 3.6.11, then you have to use the command below. But it will not copy the `PRAGMA user_version`, which is used by SoftHSM for versioning. So you have to do that manually. In this case the version number is 100.
 
     sqlite3 <PATH TO YOUR TOKEN> .dump | sqlite3 copy.db
     sqlite3 copy.db "PRAGMA user_version = 100;"

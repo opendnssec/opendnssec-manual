@@ -21,7 +21,7 @@ Within the KASP element there will be one or more policies:
         ...
     </Policy>
 
-Each policy is included in the `<Policy>...</Policy>` elements. Each policy has a "name" attribute giving the name of the policy. The name is used to link a policy and the zones signed using it; each policy must have a unique name. The policy named "default" is special, as it is associated with all zones that do not have a policy explicitly associated with them.
+Each policy is included in the `<Policy>...</Policy>` elements. Each policy has a `name` attribute giving the name of the policy. The name is used to link a policy and the zones signed using it; each policy must have a unique name. The policy named `default` is special, as it is associated with all zones that do not have a policy explicitly associated with them.
 A policy can have a description associated with it. Unlike XML comments, the description can be understood by programs and may be used to document the policy, e.g. a future GUI may display a list of policies along with their description and ask you to select one for editing.
 
 ### Signatures

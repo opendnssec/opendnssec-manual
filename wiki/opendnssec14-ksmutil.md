@@ -64,7 +64,7 @@ Add a zone to both zonelist.xml and the database (both locations read from conf.
   - --in-type will default to 'File'
   - --output will default to {prefix}/var/opendnssec/signed/<zone> for a 'File' adaptor or (available from 1.4.3) {prefix}/var/opendnssec/addns.xml for a 'DNS' adaptor
   - --out-type will default to 'File'
-- The "no-xml" flag is useful when adding a number of zones; it prevents zonelist.xml from being written to thus speeding up the process. If the "no-xml" flag is used then after all the zones have been added then the zonelist file will need to be updated via the command:
+- The `no-xml` flag is useful when adding a number of zones; it prevents zonelist.xml from being written to thus speeding up the process. If the `no-xml` flag is used then after all the zones have been added then the zonelist file will need to be updated via the command:
 
     ods-ksmutil zonelist export
 
@@ -102,7 +102,7 @@ Export a policy from the database in kasp.xml format.
 
     ods-ksmutil policy import
 
-Update the database with the contents of kasp.xml; identical to "update kasp". (Note this does not delete any policies. The command 'ods-ksmutil' policy purge can be used to remove polices with no zones associated with them.)
+Update the database with the contents of kasp.xml; identical to `update kasp`. (Note this does not delete any policies. The command 'ods-ksmutil' policy purge can be used to remove polices with no zones associated with them.)
 
 ### Command: policy list
 
@@ -188,7 +188,7 @@ Rollover active keys on a zone or policy
     --zone <zone> | --policy <policy>
     --keytype <type> | --all
 
-"keytype" specifies a single type of key to roll. After running, the enforcer will be woken up so that the signer can be sent the new information.
+`keytype` specifies a single type of key to roll. After running, the enforcer will be woken up so that the signer can be sent the new information.
 
 If the policy that the zone is on specifies that keys are shared then all zones on that policy will be rolled. A backup of the sqlite DB file is made (if appropriate).
 
@@ -199,7 +199,7 @@ If the policy that the zone is on specifies that keys are shared then all zones 
 
     ods-ksmutil key purge
 
-Remove keys that are in the "Dead" state from the repository and from the enforcer DB
+Remove keys that are in the `Dead` state from the repository and from the enforcer DB
 
 **Options**
 
@@ -398,7 +398,7 @@ Export the zone information held in the kasp database to zonelist.xml formatted 
 
     ods-ksmutil zonelist import
 
-Synchronise the database with the contents of zonelist.xml; identical to "update zonelist".
+Synchronise the database with the contents of zonelist.xml; identical to `update zonelist`.
 
 ### Allowed values
 

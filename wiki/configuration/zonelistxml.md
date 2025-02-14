@@ -4,7 +4,7 @@ Since OpenDNSSEC 2.0 zones should be added and deleted using the commandline int
 
 ### Preable and XML root element ZoneList
 
-    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml version=`1.0` encoding=`UTF-8`?>
     <ZoneList>
         ...
     </ZoneList>
@@ -15,11 +15,11 @@ Each XML file starts with a standard element `<?xml...`. As with any XML file, c
 
 Each zone is defined by a `<Zone>` element:
 
-    <Zone name="example.com">
+    <Zone name=`example.com`>
         ...
     </Zone>
 
-The mandatory attribute "name" identifies the zone. Each zone within the zone list must have a unique name. Use "." when signing the root.
+The mandatory attribute `name` identifies the zone. Each zone within the zone list must have a unique name. Use `.` when signing the root.
 
 ### Policy
 
@@ -41,14 +41,14 @@ The next part of the zone element specifies from where OpenDNSSEC gets the zone 
 
     <Adapters>
         <Input>
-           <Adapter type="File">/var/opendnssec/unsigned/example.com</Adapter>
+           <Adapter type=`File`>/var/opendnssec/unsigned/example.com</Adapter>
         </Input>
         <Output>
-            <Adapter type="DNS">/etc/opendnssec/addns.xml</Adapter>
+            <Adapter type=`DNS`>/etc/opendnssec/addns.xml</Adapter>
         </Output>
     </Adapters>
 
 The `<Adapters>` element comprises an `<Input>` and `<Output>` element which (fairly obviously) identify the input source and output sink of the data.
 
-Within each element is a tag defining the type of data source/sink and its parameters. There is type="File", which takes as its only data the name of the input unsigned file, or output signed zone file. And there is type="DNS", which takes a configuration file as its data. The DNS adapter configuration file is described in more detail in the description of the [addnsxml documentation](addnsxml).
+Within each element is a tag defining the type of data source/sink and its parameters. There is `type=`File``, which takes as its only data the name of the input unsigned file, or output signed zone file. And there is `type=`DNS``, which takes a configuration file as its data. The DNS adapter configuration file is described in more detail in the description of the [addnsxml documentation](addnsxml).
 The `</Zone>` tag closes the definition of the zone. As indicated above, one or more zones can be defined in this file. The `</ZoneList>` element closes the file.

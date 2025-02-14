@@ -70,31 +70,31 @@ Note that due to issues found in ldns version 1.3.11 (and later) of OpenDNSSEC d
 
 ldns is a DNS programming library used in the signer component.
 
-To Ubunto users:  Make sure the the packages "libldns-x.z.y" (where "x.y.z" is the ldns version number) and "libldns-dev" are installed on your system.
+To Ubunto users:  Make sure the the packages `libldns-x.z.y` (where `x.y.z` is the ldns version number) and `libldns-dev` are installed on your system.
 
 Installing from source distribution instead:
 
 Download a copy of ldns from <http://www.nlnetlabs.nl/downloads/ldns>.
 
-When downloaded and unpacked, "cd" into the directory into which you have unpacked the tar file and issue the following commands:
+When downloaded and unpacked, `cd` into the directory into which you have unpacked the tar file and issue the following commands:
 
     ./configure (--disable-gost)
     make
     sudo make install
 
-This installs the ldns library in /usr/local/lib. If you require the software to be installed elsewhere, add the switch --prefix=<location> to the ./configure command.
+This installs the ldns library in /usr/local/lib. If you require the software to be installed elsewhere, add the switch --prefix=`<location>` to the ./configure command.
 
 **libxml2**
 
 libxml2 is a C-library for handling XML. It is used in all parts of OpenDNSSEC.
 
-To Ubuntu users:  Install the packages "libxml2", "libxml2-dev", and "libxml2-utils".
+To Ubuntu users:  Install the packages `libxml2`, `libxml2-dev`, and `libxml2-utils`.
 
 Installing from	source distribution instead:
 
 Download a copy of libxml2 from <http://xmlsoft.org/downloads.html>
 
-When downloaded and unpacked, "cd" into the directory into which you have unpacked the tar file and issue the following commands:
+When downloaded and unpacked, `cd` into the directory into which you have unpacked the tar file and issue the following commands:
 
     ./configure
     make
@@ -106,17 +106,17 @@ This installs the libxml2 library in /usr/local/lib. If you require the software
 
 Ruby Gems is the standard way of installing Ruby packages. It is only used for the installation of the DNSRuby package.
 
-To Ubunto users:  Install the package "rubygems".
+To Ubunto users:  Install the package `rubygems`.
 
 Installing from source distribution instead:
 
 Download a copy of RubyGems from <http://rubyforge.org/projects/rubygems>.
 
-When downloaded and unpacked, make sure that "ruby" is in your path, then issue the following command:
+When downloaded and unpacked, make sure that `ruby` is in your path, then issue the following command:
 
     sudo ruby setup.rb
 
-... to install RubyGems. The command "gem" will be installed in the same place as the "ruby" command.
+... to install RubyGems. The command `gem` will be installed in the same place as the `ruby` command.
 
 **dnsruby**
 
@@ -130,7 +130,7 @@ There is no Ubuntu package for dnsruby. Instead, on all operating systems, insta
 
 The Auditor uses the OpenSSL library for some operations.
 
-To Ubunto users:  Install the package "libopenssl-ruby".
+To Ubunto users:  Install the package `libopenssl-ruby`.
 
 Installing from source distribution instead:
 
@@ -140,11 +140,11 @@ Most operating systems seem to include this software as part of the operating sy
 
 SQlite is a cut-down SQL database system, used by the KASP component of OpenDNSSEC.
 
-To Ubunto users:  Install the packages "sqlite3" and "libsqlite3-dev".
+To Ubunto users:  Install the packages `sqlite3` and `libsqlite3-dev`.
 
 Installing from source distribution instead:
 
-When downloaded and unpacked, "cd" into the directory into which you have unpacked the tar file and issue the following commands:
+When downloaded and unpacked, `cd` into the directory into which you have unpacked the tar file and issue the following commands:
 
     ./configure
     make
@@ -156,7 +156,7 @@ This installs sqlite in /usr/local/bin. If you require the software to be instal
 
 You can choose to use MySQL instead of SQLite for the KASP database. This will give you better performance when handling thousands of zones.
 
-To Ubunto users: Install the packages "mysql-client", "libmysqlclient15", "libmysqlclient15-dev".
+To Ubunto users: Install the packages `mysql-client`, `libmysqlclient15`, `libmysqlclient15-dev`.
 
 Installing from source distribution instead:
 
@@ -239,7 +239,7 @@ All date/time durations in the configuration files are specified as defined by I
 
 > Durations are represented by the format P[n]Y[n]M[n]DT[n]H[n]M[n]S. In these representations, the [n] is replaced by the value for each of the date and time elements that follow the [n]. Leading zeros are not required. The capital letters 'P', 'Y', 'M', 'D', 'T', 'H', 'M', and 'S' are designators for each of the date and time elements and are not replaced.
 
-- P is the duration designator (historically called "period") placed at the start of the duration representation.
+- P is the duration designator (historically called `period`) placed at the start of the duration representation.
 - Y is the year designator that follows the value for the number of years.
 - M is the month designator that follows the value for the number of months.
 - D is the day designator that follows the value for the number of days.
@@ -248,7 +248,7 @@ All date/time durations in the configuration files are specified as defined by I
 - M is the minute designator that follows the value for the number of minutes.
 - S is the second designator that follows the value for the number of seconds.
 
-For example, "P3Y6M4DT12H30M5S" represents a duration of "three years, six months, four days, twelve hours, thirty minutes, and five seconds". Date and time elements including their designator may be omitted if their value is zero, and lower order elements may also be omitted for reduced precision. For example, "P23DT23H" and "P4Y" are both acceptable duration representations.
+For example, `P3Y6M4DT12H30M5S` represents a duration of `three years, six months, four days, twelve hours, thirty minutes, and five seconds`. Date and time elements including their designator may be omitted if their value is zero, and lower order elements may also be omitted for reduced precision. For example, `P23DT23H` and `P4Y` are both acceptable duration representations.
 
 
 Exception: A year or month vary in duration depending on the current date. For OpenDNSSEC, we assume fixed values:
@@ -262,7 +262,7 @@ The overall configuration of OpenDNSSEC is defined by the contents of the file /
 
 #### kasp.xml
 
-kasp.xml - found by default in /etc/opendnssec - is the file that defines policies used to sign zones. KASP stands for "Key and Signature Policy”, and each policy details
+kasp.xml - found by default in /etc/opendnssec - is the file that defines policies used to sign zones. KASP stands for `Key and Signature Policy”, and each policy details
 
 - security parameters used for signing zones
 - timing parameters used for signing zones
@@ -305,16 +305,16 @@ These are described in the signconf.xml configuration files.
 
 #### kasp.xml
 
-KASP stands for "Key and Signature Policy"
+KASP stands for `Key and Signature Policy`.
 
 kasp.xml (found by default in /etc/opendnssec) is the file that defines policies used to sign zones. Each policy comprises a series of parameters that define the way the zone is signed. This section explains the parameters by referring to the example kasp.xml file supplied with the OpenDNSSEC distribution.
 
 **Preamble**
 
-    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml version=`1.0` encoding=`UTF-8`?>
     <!-- $Id: kasp.xml.in 1154 2009-06-24 13:02:25Z jakob $ -->
 
-Each XML file starts with a standard element "<?xml...". As with any XML file, comments are included between the delimiters "<!--"  and "-->".
+Each XML file starts with a standard element `<?xml...`. As with any XML file, comments are included between the delimiters `<!--`  and `-->`.
 
 **Policy Description**
 
@@ -323,11 +323,11 @@ Each XML file starts with a standard element "<?xml...". As with any XML file, c
 The enclosing element of the XML file is the element `<KASP>` which, with the closing element `</KASP>`, brackets one or more policies.
 
     ...
-        <Policy name="default">
+        <Policy name=`default`>
 
-Each policy is included in the `<Policy>...</Policy>` elements. Each policy has a "name" attribute giving the name of the policy. The name is used to link a policy and the zones signed using it; each policy must have a unique name.
+Each policy is included in the `<Policy>...</Policy>` elements. Each policy has a `name` attribute giving the name of the policy. The name is used to link a policy and the zones signed using it; each policy must have a unique name.
 
-The policy named "default" is special, as it is associated with all zones that do not have a policy explicitly associated with them.
+The policy named `default` is special, as it is associated with all zones that do not have a policy explicitly associated with them.
 
     ...
         <Description>A default policy that will amaze you and your friends</Description>
@@ -376,7 +376,7 @@ Authenticated denial of existence - proving that domain names do not exist in th
                 <Hash>
                     <Algorithm>1</Algorithm>
                     <Iterations>5</Iterations>
-                    <Salt length="8"/>
+                    <Salt length=`8`/>
                 </Hash>
             </NSEC3>
         </Denial>
@@ -388,7 +388,7 @@ NSEC3:
 - `<NSEC3>` tells the signer to implement NSEC3 scheme for authenticated denial of existence (described in RFC 5155). The elements are:
 - `<TTL>` - if present, use this duration for NSEC3PARAM TTL. If not present, PT0S (0) will be used as TTL (included since version 1.3.16).
   This will only affect the time-to-live value for the NSEC3PARAM resource records. The time-to-live value for NSEC3 records is set to the value of the SOA `<Minimum>`.
-- `<OptOut/>` - if present, enable "opt out". This is an optimisation that means that NSEC3 records are only created for authoritative data or for secure delegations; insecure delegations have no NSEC3 records. For zones where a majority of the entries are delegations that are not signed - typically TLDs during the take-up phase of DNSSEC - this reduces the number of DNSSEC records in the zone.
+- `<OptOut/>` - if present, enable `opt out`. This is an optimisation that means that NSEC3 records are only created for authoritative data or for secure delegations; insecure delegations have no NSEC3 records. For zones where a majority of the entries are delegations that are not signed - typically TLDs during the take-up phase of DNSSEC - this reduces the number of DNSSEC records in the zone.
 - `<Resalt>` is the interval between generating new salt values for the hashing algorithm.
 - `<Algorithm>`, `<Iterations>` and `<Salt>` are parameters to the hash algorithm, described in [RFC5155](http://tools.ietf.org/html/rfc5155).
 
@@ -426,7 +426,7 @@ If `<Purge>` is present, keys marked as dead will be automatically purged from t
 Parameters for key-signing keys are held in the `<KSK>` section:
 
             <KSK>
-                <Algorithm length="2048">7</Algorithm>
+                <Algorithm length=`2048`>7</Algorithm>
                 <Lifetime>P1Y</Lifetime>
                 <Repository>softHSM</Repository>
                 <!-- <Standby>1</Standby> (Experimental) -->
@@ -435,16 +435,16 @@ Parameters for key-signing keys are held in the `<KSK>` section:
 
 - `<Algorithm>` determines the algorithm used for the key (the numbers reserved for each algorithm can be found in the appropriate IANA registry).
 - `<Lifetime>` determines how long the key is used for before it is rolled.
-- `<Repository>` determines the location of the keys. Keys are stored in "repositories" (currently, only hardware security modules (HSMs) or devices conforming to the PKCS#11 interface), which are defined in the conf.xml. In the example above, the key is stored in softHSM - the example configuration file distributed with OpenDNSSEC defines this as being the software emulation of an HSM distributed as part of OpenDNSSEC.
+- `<Repository>` determines the location of the keys. Keys are stored in `repositories` (currently, only hardware security modules (HSMs) or devices conforming to the PKCS#11 interface), which are defined in the conf.xml. In the example above, the key is stored in softHSM - the example configuration file distributed with OpenDNSSEC defines this as being the software emulation of an HSM distributed as part of OpenDNSSEC.
 - `<Standby>` **Experimental** (we are currently not supporting offline HSM, which is needed to get the security level needed to fulfill the idea behind standby keys. Will be fixed in a future version) Determines the number of standby keys held in the zone. These keys allow the currently active key to be immediately retired should it be compromised, so enhancing the security of the system. (Without an standby key, additional time is required to allow information about the new key to reach validator caches - see <http://tools.ietf.org/html/draft-ietf-dnsop-dnssec-key-timing-02> for timing details.)
-`<ManualRollover/>` is an optional tag. This tag indicate that the key rollover will only be initiated on the command by the operator. There is still a second step for the KSK, where the key needs to be published to the parent before the rollover is completed. Read more in the chapter "Running OpenDNSSEC". The ZSK rollover will although be fully automatic if this tag is not present.
+`<ManualRollover/>` is an optional tag. This tag indicate that the key rollover will only be initiated on the command by the operator. There is still a second step for the KSK, where the key needs to be published to the parent before the rollover is completed. Read more in the chapter `Running OpenDNSSEC`. The ZSK rollover will although be fully automatic if this tag is not present.
 
 **Zone-Signing Keys**
 
 Parameters for zone-signing keys are held in the `<ZSK>` section, and have the same meaning as for the KSK:
 
             <ZSK>
-                <Algorithm length="1024">7</Algorithm>
+                <Algorithm length=`1024`>7</Algorithm>
                 <Lifetime>P14D</Lifetime>
                 <Repository>softHSM</Repository>
                 <!-- <Standby>1</Standby> (Experimental) -->
@@ -473,11 +473,11 @@ General information concerning the zones can be found in the `<Zone>` section:
   These values will override values set for the SOA record in the input zone file.
   The values are:
   - `<TTL>` - TTL of the SOA record.
-  - `<Minimum>` - value for the SOA's "minimum" parameter.
+  - `<Minimum>` - value for the SOA's `minimum` parameter.
   - `<Serial>` - the format of the serial number in the signed zone. This is one of:
     - counter - use an increasing counter (but use the serial from the unsigned zone if possible)
     - datecounter - use increasing counter in YYYYMMDDxx format (xx is incremented within each day)
-    - unixtime - the serial number is set to the "Unix time" (seconds since 00:00 on 1 January 1970 (UTC)) at which the signer is run.
+    - unixtime - the serial number is set to the `Unix time` (seconds since 00:00 on 1 January 1970 (UTC)) at which the signer is run.
     - keep - keep the serial from the unsigned zone (do not resign unless it has been incremented)
 
 **Parent Zone Information**
@@ -498,7 +498,7 @@ If a DNSSEC zone is in a chain of trust, digest information about the KSKs used 
 
 - `<PropagationDelay>` is the interval between the time a new KSK is published in the zone and the time that the DS record appears in the parent zone.
 - The `<DS>` tag holds information about the DS record in the parent. It contains a single element, `<TTL>`, which should be set to the TTL of the DS record in the parent zone.
-- `<SOA>` gives information about parameters of the parent's SOA record, used by KASP in its calculations. As before, `<TTL>` is the TTL of the SOA record and `<Minimum>` is the value of the "minimum" parameter.
+- `<SOA>` gives information about parameters of the parent's SOA record, used by KASP in its calculations. As before, `<TTL>` is the TTL of the SOA record and `<Minimum>` is the value of the `minimum` parameter.
 
 **Auditing**
 
@@ -533,7 +533,7 @@ The location of these files can be found in zonelist.xml, but we refer to signco
 
 **Preamble**
 
-    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml version=`1.0` encoding=`UTF-8`?>
     <!-- $Id: signconf.xml.in 3061 2010-03-16 19:23:51Z jakob $ -->
 
 Each XML file starts with a standard element `<?xml...`. As with any XML file, comments are included between the delimiters `<!--` and `-->`.
@@ -544,9 +544,9 @@ Each XML file starts with a standard element `<?xml...`. As with any XML file, c
 
 The enclosing element of the XML file is the element `<SignerConfiguration?>` which, with the closing element `</SignerConfiguration>`, brackets one signer configuration.
 
-    <Zone name="opendnssec.org">
+    <Zone name=`opendnssec.org`>
 
-Each zone is included in the `<Zone>...</Zone>` elements. Each zone has a "name" attribute giving the name of the zone.
+Each zone is included in the `<Zone>...</Zone>` elements. Each zone has a `name` attribute giving the name of the zone.
 
 **Signatures**
 
@@ -576,7 +576,7 @@ Authenticated denial of existence - proving that domain names do not exist in th
                 <Hash>
                     <Algorithm>1</Algorithm>
                     <Iterations>5</Iterations>
-                    <Salt length="8"/>
+                    <Salt length=`8`/>
                 </Hash>
             </NSEC3>
         </Denial>
@@ -588,7 +588,7 @@ NSEC3:
 - `<NSEC3>` tells the signer to implement NSEC3 scheme for authenticated denial of existence (described in RFC 5155). The elements are:
 - `<TTL>` - if present, use this duration for NSEC3PARAM TTL. If not present, PT0S (0) will be used as TTL (included since version 1.3.16).
   This will only affect the time-to-live value for the NSEC3PARAM resource records. The time-to-live value for NSEC3 records is set to the value of the SOA `<Minimum>`.
-- `<OptOut/>` - if present, enable "opt out". This is an optimisation that means that NSEC3 records are only created for authoritative data or for secure delegations; insecure delegations have no NSEC3 records. For zones where a majority of the entries are delegations that are not signed - typically TLDs during the take-up phase of DNSSEC - this reduces the number of DNSSEC records in the zone.
+- `<OptOut/>` - if present, enable `opt out`. This is an optimisation that means that NSEC3 records are only created for authoritative data or for secure delegations; insecure delegations have no NSEC3 records. For zones where a majority of the entries are delegations that are not signed - typically TLDs during the take-up phase of DNSSEC - this reduces the number of DNSSEC records in the zone.
 - `<Resalt>` is the interval between generating new salt values for the hashing algorithm.
 - `<Algorithm>`, `<Iterations>` and `<Salt>` are parameters to the hash algorithm, described in RFC 5155.
 
@@ -659,7 +659,7 @@ The values are:
 - `<Serial>` - the format of the serial number in the signed zone. This is one of:
   - counter - use an increasing counter (but use the serial from the unsigned zone if possible)
   - datecounter - use increasing counter in YYYYMMDDxx format (xx is incremented within each day)
-  - unixtime - the serial number is set to the "Unix time" (seconds since 00:00 on 1 January 1970 (UTC)) at which the signer is run.
+  - unixtime - the serial number is set to the `Unix time` (seconds since 00:00 on 1 January 1970 (UTC)) at which the signer is run.
   - keep - keep the serial from the unsigned zone (do not resign unless it has been incremented)
 
 **Auditing**
@@ -853,7 +853,7 @@ Unlike ZSKs, a KSK rollover requires a second step involving manual intervention
 
 The stages are:
 
-1. Extract the DNSKEY record for the new key and publish it in the parent zone. (The new record replace any existing records for the zone being signed.) When it is time for this to happen a message with log-level "info" will be sent to syslog looking something like:
+1. Extract the DNSKEY record for the new key and publish it in the parent zone. (The new record replace any existing records for the zone being signed.) When it is time for this to happen a message with log-level `info` will be sent to syslog looking something like:
 
         Mar 16 11:39:05 sion ods-enforcerd: DS Record set has changed, the current set looks like:
         Mar 16 11:39:05 sion ods-enforcerd: example.com. 3600 IN DNSKEY 257 3 7 AwEAAbcTSmphJUMKvegvDgqGspRM8IHlKZqoU5pkPaTtRLkioxGyZ5iIh4bNnvqmx1zWIttuJ6erGUMOatMm3SXxiTr9OLaRPr86KVpo6mzejTqFicGxSp3KsrbUvyIs/V84Ry7XZBKVKVjgppjmqeS8mRtXM4UynwTEJk0hKQfCcmkH0Q/fhZibwBVG+OcBfvTdsQbp8LZN4oVqn/vzhnuxFkE8biTr19jmKTdtgkhp524ML59v7prg7F/+Lb2OJLc8Gg6pastUeqXc/Iv2CdVyOvMWRW39VCzyLbKpmyqB8Hc4Kn1pT5Idqc3/N3qBvXVe3HyyiZbjHGxOT6RZNNT8= ;{id = 51994 (ksk), size = 2048b}
@@ -901,7 +901,7 @@ command (or the appropriate command listed below) in order for the changes to be
   When making changes to the KASP policy the following should also be considered:
   - It is advised not to update policy details (in particular propagation times) while a rollover is in progress.
   - Changing the algorithm used in a policy is not supported in 1.3 or 1.4.
-  - Certain policy changes e.g. changing 'Standby keys" from 'on' to 'off' may lead to orphaned keys.
+  - Certain policy changes e.g. changing 'Standby keys` from 'on' to 'off' may lead to orphaned keys.
   - After updating signature timers in the policy it may be helpful to issue the command ( as it will speed up acclimatising timers for the signatures.):
     ods-signer clear <zone>; ods-signer sign <zone>
 - If you add zones directly into the zonelist (rather than using the ods-ksmutil zone add command) you must tell the enforcer to re-read the zone list by using the command:
@@ -911,8 +911,8 @@ command (or the appropriate command listed below) in order for the changes to be
 
 - The pids used by the enforcer and signer processes are reported in syslog on startup.
 - The command 'ods-signer running' will report the status of the signer process, or restart it if it is not running.
-- When the enforcer daemon has run and completed enforcing the zones is sends a message to the syslog containing the text "Sleeping for" reporting how long it will be until it next runs 
-- The signer produces a log containing the text "[STAT]" whenever a zone is successfully signed
+- When the enforcer daemon has run and completed enforcing the zones is sends a message to the syslog containing the text `Sleeping for` reporting how long it will be until it next runs 
+- The signer produces a log containing the text `[STAT]` whenever a zone is successfully signed
 - A Nagios plugin is available to check signed zones: <https://github.com/opendnssec/dnssec-monitor>
 
 Currently all logging is handled by syslog. Other logging methods may come later.
@@ -941,29 +941,29 @@ The following are log messages which you may see, and what to do about them (if 
 
 **Enforcer**
 
-??? "ods-enforcerd: ERROR: Trying to make non-backed up ZSK active when RequireBackup flag is set"
+??? `ods-enforcerd: ERROR: Trying to make non-backed up ZSK active when RequireBackup flag is set`
      This is not an error as such. It means that in conf.xml you have indicated that keys should not be used unless they are backed up. However, the enforcer has determined that if it continues then a non backed up key will be made active.  
      The solution Take a backup of your keys (how this is done will depend on your key storage).  
       Once this has been done then run ods-ksmutil backup done to mark all keys as having been backed up. 
 
-??? "ods-enforcerd: WARNING: Making non-backed up KSK active, PLEASE make sure that you know the potential problems of using keys which are not recoverable"
+??? `ods-enforcerd: WARNING: Making non-backed up KSK active, PLEASE make sure that you know the potential problems of using keys which are not recoverable`
     This is the same as above, but without RequireBackup being set in conf.xml 
 
-??? "ods-enforcerd: WARNING: key rollover not completed as there are no keys in the ready state: ods-enforcerd will try again when it runs next"
+??? `ods-enforcerd: WARNING: key rollover not completed as there are no keys in the ready state: ods-enforcerd will try again when it runs next`
     This is seen when a rollover is happening but there is no replacement key ready (because one has not been published for long enough). It indicates that the rollover will be delayed until the replacement key is ready, the time that this will happen depends on the policy.
 
-??? "ods-enforcerd: Could not call signer engine"
+??? `ods-enforcerd: Could not call signer engine`
      If the enforcer makes a change to a zones signer configuration (say it adds a new key) it calls the signer to get it to resign that zone. This message indicates that the signer is not running, although it has been seen on a system where everything is working fine. (See KNOWN_ISSUES.)
 
-??? "ods-enforcerd: Not enough keys to satisfy zsk policy for zone"
+??? `ods-enforcerd: Not enough keys to satisfy zsk policy for zone`
     One of these messages will be seen if the enforcer does not have enough unallocated keys to provide for the zone specified. If the ManualKeyGeneration tag is set in conf.xml then you will need to create new keys using ods-ksmutil key generate, otherwise new keys will be created when the enforcer runs next. (Don't forget to backup any new keys.)
 
-??? "ods-enforcerd: Rollover of KSK expected at `<DATE TIME>` for `<ZONE>`"
+??? `ods-enforcerd: Rollover of KSK expected at `<DATE TIME>` for `<ZONE>``
     This is not an error, but a notification of an upcoming (scheduled) rollover. This will appear in your logs at a time prior to the rollover as configured in conf.xml (theEnforcer/RolloverNotification tag).
 
-??? "ods-enforcerd: WARNING: KSK Retirement reached; please submit the new DS for `<ZONE>` and use ods-ksmutil key ksk-roll to roll the key."
+??? `ods-enforcerd: WARNING: KSK Retirement reached; please submit the new DS for `<ZONE>` and use ods-ksmutil key ksk-roll to roll the key.`
      Rolling a KSK requires the DS record of the replacement key to be published in the parent of the zone. This message indicates that your KSK has reached the end of its life (as specified by your policy), and that it is time to submit the DS record to the parent.
 
-??? "ods-enforcerd: Error: database in config file `<path_to_conf.xml>` does not match libksm"
+??? `ods-enforcerd: Error: database in config file `<path_to_conf.xml>` does not match libksm`
     This indicates that either you have libksm built for sqlite, but have specified a MySQL database in conf.xml, or vice versa.  
     The solution is to either rebuild libksm or to change conf.xml

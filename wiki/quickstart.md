@@ -78,7 +78,7 @@ And then load the policies:
 
 ### Add a simple zone and sign it.
 
-We will now add a simple zone and sign it.  Its usage will not be very realistic, because we want a quick result for now.  We will add a zone for the domain "example.com", so we first need to get the zone data in place.  With our current set-up, OpenDNSSEC will look at the location ``/var/opendnssec/unsigned`` for the input zone files, which should get the same name as the domain, so now create the file ``/var/opendnssec/unsigned/example.com`` with the following contents:
+We will now add a simple zone and sign it.  Its usage will not be very realistic, because we want a quick result for now.  We will add a zone for the domain `example.com`, so we first need to get the zone data in place.  With our current set-up, OpenDNSSEC will look at the location ``/var/opendnssec/unsigned`` for the input zone files, which should get the same name as the domain, so now create the file ``/var/opendnssec/unsigned/example.com`` with the following contents:
 
     $ORIGIN example.com.
     $TTL 86400
@@ -87,7 +87,7 @@ We will now add a simple zone and sign it.  Its usage will not be very realistic
     example.com.            IN      NS      ns
     ns                      IN      A       192.0.2.1
 
-Now instruct OpenDNSSEC to start signing this zone using the "lab" policy.  This policy is not very realistic.  The default policy that has been loaded from the ``kasp.xml`` is suitable for many usages but will take longer to take effect.  The default policy is used by either replacing "lab" by "default" or by ommiting the "-p lab" altogether:
+Now instruct OpenDNSSEC to start signing this zone using the `lab` policy.  This policy is not very realistic.  The default policy that has been loaded from the ``kasp.xml`` is suitable for many usages but will take longer to take effect.  The default policy is used by either replacing `lab` by `default` or by ommiting the `-p lab` altogether:
 
     ods-enforcer zone add -z example.com -p lab
 
