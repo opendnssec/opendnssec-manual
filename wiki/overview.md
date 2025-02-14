@@ -33,7 +33,7 @@ OpenDNSSEC manages various information on disk which includes the following
 
 ### Configuration Files
 
-By default OpenDNSSECs configuration files are stored in /etc/opendnssec/. 
+By default OpenDNSSECs configuration files are stored in `/etc/opendnssec/`. 
 
 #### conf.xml
 
@@ -49,7 +49,7 @@ Specifies the input and output adapters which describe to the Signer how to acqu
 
 #### Zone Files
 
-In case the File input adapter is used OpenDNSSEC expects to find the unsigned zonefile in /var/opendnssec/unsigned. Likewise for the File output adapter /var/opendnssec/signed is the location where the Signer will write its signed zonefiles to. These locations are not used when the DNS adapters are selected.
+In case the File input adapter is used OpenDNSSEC expects to find the unsigned zonefile in `/var/opendnssec/unsigned`. Likewise for the File output adapter `/var/opendnssec/signed` is the location where the Signer will write its signed zonefiles to. These locations are not used when the DNS adapters are selected.
 
 #### Working Files
 

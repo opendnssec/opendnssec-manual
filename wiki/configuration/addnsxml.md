@@ -1,6 +1,6 @@
 ## addns.xml
 
-Per zone you can configure the zone transfer settings. One file can be used for multiple zones, just point to the same file in the zone list file /etc/opendnssec/zonelist.xml.
+Per zone you can configure the zone transfer settings. One file can be used for multiple zones, just point to the same file in the zone list file `/etc/opendnssec/zonelist.xml`.
 
 This section explains the parameters of the DNS adapter configuration by referring to the example addns.xml file supplied with the OpenDNSSEC distribution. 
 

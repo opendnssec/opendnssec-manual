@@ -32,7 +32,7 @@ Changing the algorithm is no different than changing other policy parameters. Ch
 
 ### Clear all state and start over
 
-Suppose you are testing OpenDNSSEC in your environent and at some point want to reset is to be like a fresh installed instance. The main thing to do is run ods-enforcer-db-setup (after stopping OpenDNSSEC entirely). The Enforcer database is then clean and empty. We still need to files from /var to make sure the Signer isn't still using old data.
+Suppose you are testing OpenDNSSEC in your environent and at some point want to reset is to be like a fresh installed instance. The main thing to do is run `ods-enforcer-db-setup` (after stopping OpenDNSSEC entirely). The Enforcer database is then clean and empty. We still need to files from `/var` to make sure the Signer isn't still using old data.
 
     rm /var/opendnssec/enforcer/zones.xml
     rm /var/opendnssec/signconf/*

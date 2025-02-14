@@ -1,6 +1,6 @@
 ## conf.xml
 
-The overall configuration of OpenDNSSEC is defined by the contents of the file /etc/opendnssec/conf.xml. In this configuration file you specify logging facilities (only syslog is supported now), system paths, key repositories, privileges, and the database where all key and zone information is stored.
+The overall configuration of OpenDNSSEC is defined by the contents of the file `/etc/opendnssec/conf.xml`. In this configuration file you specify logging facilities (only syslog is supported now), system paths, key repositories, privileges, and the database where all key and zone information is stored.
 
 ### Preamble
 
@@ -72,7 +72,7 @@ These are the configuration that is shared among the components of OpenDNSSEC.
         <ZoneListFile>/etc/opendnssec/zonelist.xml</ZoneListFile>
     </Common>
 
-- All components of OpenDNSSEC logs errors, warnings and progress information. This is configurable and defined in the `<Logging>` element. Currently, the only syslog() feature configurable via the OpenDNSSEC configuration file is the facility name under which messages are logged. This can be any of the names listed in the operating system's syslog header file (usually /usr/include/sys/syslog.h, but the location is system dependent). 
+- All components of OpenDNSSEC logs errors, warnings and progress information. This is configurable and defined in the `<Logging>` element. Currently, the only syslog() feature configurable via the OpenDNSSEC configuration file is the facility name under which messages are logged. This can be any of the names listed in the operating system's syslog header file (usually `/usr/include/sys/syslog.h`, but the location is system dependent). 
 - `<Verbosity>` controls the level of logging, 0 will disable logging and 3 (default level) will provide informational log messages. You can set it higher to get debug log messages.
 
 

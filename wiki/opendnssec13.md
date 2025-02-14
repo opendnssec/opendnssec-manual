@@ -82,7 +82,7 @@ When downloaded and unpacked, `cd` into the directory into which you have unpack
     make
     sudo make install
 
-This installs the ldns library in /usr/local/lib. If you require the software to be installed elsewhere, add the switch --prefix=`<location>` to the ./configure command.
+This installs the ldns library in `/usr/local/lib`. If you require the software to be installed elsewhere, add the switch --prefix=`<location>` to the ./configure command.
 
 **libxml2**
 
@@ -100,7 +100,7 @@ When downloaded and unpacked, `cd` into the directory into which you have unpack
     make
     sudo make install
 
-This installs the libxml2 library in /usr/local/lib. If you require the software to be installed elsewhere, add the switch --prefix=<location> to the ./configure command.
+This installs the libxml2 library in `/usr/local/lib`. If you require the software to be installed elsewhere, add the switch --prefix=<location> to the ./configure command.
 
 **Ruby Gems**
 
@@ -150,7 +150,7 @@ When downloaded and unpacked, `cd` into the directory into which you have unpack
     make
     sudo make install
 
-This installs sqlite in /usr/local/bin. If you require the software to be installed elsewhere, add the switch --prefix=<location> to the ./configure command.
+This installs sqlite in `/usr/local/bin`. If you require the software to be installed elsewhere, add the switch --prefix=<location> to the ./configure command.
 
 **MySQL**
 
@@ -258,11 +258,11 @@ Exception: A year or month vary in duration depending on the current date. For O
 
 #### conf.xml
 
-The overall configuration of OpenDNSSEC is defined by the contents of the file /etc/opendnssec/conf.xml. In this configuration file you specify logging facilities (only syslog is supported now), system paths, key repositories, privileges, and the database where all key and zone information is stored.
+The overall configuration of OpenDNSSEC is defined by the contents of the file `/etc/opendnssec/conf.xml`. In this configuration file you specify logging facilities (only syslog is supported now), system paths, key repositories, privileges, and the database where all key and zone information is stored.
 
 #### kasp.xml
 
-kasp.xml - found by default in /etc/opendnssec - is the file that defines policies used to sign zones. KASP stands for `Key and Signature Policy”, and each policy details
+kasp.xml - found by default in `/etc/opendnssec` - is the file that defines policies used to sign zones. KASP stands for `Key and Signature Policy”, and each policy details
 
 - security parameters used for signing zones
 - timing parameters used for signing zones
@@ -307,7 +307,7 @@ These are described in the signconf.xml configuration files.
 
 KASP stands for `Key and Signature Policy`.
 
-kasp.xml (found by default in /etc/opendnssec) is the file that defines policies used to sign zones. Each policy comprises a series of parameters that define the way the zone is signed. This section explains the parameters by referring to the example kasp.xml file supplied with the OpenDNSSEC distribution.
+kasp.xml (found by default in `/etc/opendnssec`) is the file that defines policies used to sign zones. Each policy comprises a series of parameters that define the way the zone is signed. This section explains the parameters by referring to the example kasp.xml file supplied with the OpenDNSSEC distribution.
 
 **Preamble**
 
@@ -747,7 +747,7 @@ Key 9621ca39306ce050e8dd94c5ab837001 made active
 
 **Adding / Removing zones***
 
-Zones can be added and removed at will. If the optional parameters are not given, then it will default to the policy default and the /var/opendnssec/ subdirectories.
+Zones can be added and removed at will. If the optional parameters are not given, then it will default to the policy default and the `/var/opendnssec/` subdirectories.
 
     ods-ksmutil zone add --zone example.com [--policy <policy> --signerconf <signerconf.xml> --input <input> --output <output>]
     ods-ksmutil zone delete --zone example.com

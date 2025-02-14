@@ -15,7 +15,7 @@ If the packaged version for your distribution does not work try to compile the l
 
 Since this package is outdated we won't provide exact details on compilation and installing.  However normal autoconf/automake scripts are supplied and a normal configure script can be called to prepare compilation with make.  Some notes on configuration after installation:
 
-SoftHSMv1 uses a default location of its run-time configuration file at /etc/softhsm.conf.  This location can be change by setting an environment variable:
+SoftHSMv1 uses a default location of its run-time configuration file at `/etc/softhsm.conf`.  This location can be change by setting an environment variable:
 
     export SOFTHSM_CONF=/home/user/config.file
 

@@ -1,6 +1,6 @@
 ## kasp.xml
 
-kasp.xml (found by default in /etc/opendnssec) is the file that defines policies used to sign zones. Each policy comprises a series of parameters that define the way the zone is signed. This section explains the parameters by referring to the example kasp.xml file supplied with the OpenDNSSEC distribution. 
+kasp.xml (found by default in `/etc/opendnssec`) is the file that defines policies used to sign zones. Each policy comprises a series of parameters that define the way the zone is signed. This section explains the parameters by referring to the example kasp.xml file supplied with the OpenDNSSEC distribution. 
 
 ### Preamble and XNL root tag
 
