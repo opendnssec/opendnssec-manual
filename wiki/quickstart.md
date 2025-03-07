@@ -34,7 +34,7 @@ Whether the configure command explicitly needs a path to the ``botan-2`` library
 
  Again we can fetch the OpenDNSSEC source code, and perform all necessary steps to get OpenDNSSEC installed in one go:
 
-    wget https://dist.opendnssec.org/source/opendnssec-2.1.14.tar.gz
+    wget https://github.com/opendnssec/opendnssec/releases/download/2.1.14/opendnssec-2.1.14.tar.gz
     tar xzf opendnssec-2.1.14.tar.gz
     cd opendnssec-2.1.14
     ./configure
