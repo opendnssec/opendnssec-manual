@@ -2,14 +2,12 @@
 
 ## Introduction
 
-OpenDNSSEC was created as an open-source turn-key solution for DNSSEC. It
+[OpenDNSSEC](http://www.opendnssec.org/) was created as an open-source turn-key solution for DNSSEC. It
 secures zone data just before it is published in an authoritative name server.
 
-## More Information
+This repository contains the content visible at https://wiki.opendnssec.org/ in MkDocs markdown format,
+rendered by [ReadTheDocs.org](https://www.readthedocs.org/).
 
-More informnation can be found at the project website available at
-http://www.opendnssec.org/ and on the development WIKI at
-http://wiki.opendnssec.org/.
+It is based on conrtent exported from the Confluence instance that previously hosted it.
 
-Information about announcements, bug reporting and mailing lists can be found
-at http://www.opendnssec.org/support/.
+Any changes to this repository automatically trigger a rebuild at ReadTheDocs via a GitHub webhook.
