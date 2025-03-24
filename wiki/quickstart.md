@@ -21,7 +21,7 @@ OpenDNSSEC requires only a few dependencies to run, the ``ldns`` library, ``libx
 
 In one go we can get, unpack, configure, compile and install SoftHSM:
 
-    wget https://dist.opendnssec.org/source/softhsm-2.6.1.tar.gz
+    wget https://github.com/opendnssec/opendnssec/releases/download/2.1.14/softhsm-2.6.1.tar.gz
     tar xzf softhsm-2.6.1.tar.gz
     cd softhsm-2.6.1
     ./configure

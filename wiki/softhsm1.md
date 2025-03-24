@@ -2,10 +2,9 @@
 
 [SoftHSM](https://www.softhsm.org) is an implementation of a cryptographic store accessible through a PKCS#11 interface.  The first version of SoftHSM was developed for OpenDNSSEC using the general requirements for DNSSEC. It uses the library Botan for the crypto operations and the keys are stored in a database backend using SQLite.  You can use SoftHSM as an HSM for OpenDNSSEC.
 
-SoftHSM version 1 has been superseded by version 2 and is no longer supported.  It is still available for reference.  The code for SoftHSMv1 can be downloaded from the OpenDNSSEC website and is hosted on GitHub.
+SoftHSM version 1 has been superseded by version 2 and is no longer supported.  It is still available for reference.  The code for SoftHSMv1 is hosted on GitHub.
 
-- Download location: [https://dist.opendnssec.org/](https://dist.opendnssec.org/source/).
-- GitHub location: [https://github.com/opendnssec/SoftHSMv1](https://github.com/opendnssec/SoftHSMv1)
+- GitHub location: [https://github.com/softhsm/SoftHSMv1](https://github.com/softhsm/SoftHSMv1)
 
 ### Dependencies, building and installing
 
