@@ -6,7 +6,7 @@
   [minutes](meetings/Developer%20Workshop%20-%20Stockholm%20Dec%202013%20-%20Minutes%20-%20OpenDNSSEC%20Development%20-%20OpenDNSSEC.pdf)
 - 2013-12-02
   [agenda](meetings/2013-12-02%20Agenda%20-%20OpenDNSSEC%20Development%20-%20OpenDNSSEC.pdf)
-  [minutes](2013-12-02%20Minutes%20-%20OpenDNSSEC%20Development%20-%20OpenDNSSEC.pdf)
+  [minutes](meetings/2013-12-02%20Minutes%20-%20OpenDNSSEC%20Development%20-%20OpenDNSSEC.pdf)
 - 2013-11-21
   [agenda](meetings/2013-11-21%20Agenda%20-%20OpenDNSSEC%20Development%20-%20OpenDNSSEC.pdf)
   [minutes](meetings/2013-11-21%20Minutes%20-%20OpenDNSSEC%20Development%20-%20OpenDNSSEC.pdf)
@@ -113,7 +113,7 @@
   [minutes](meetings/2012-08-07%20Minutes%20-%20OpenDNSSEC%20Development%20-%20OpenDNSSEC.pdf)
 - 2012-07-24 (Project meeting, Telephone)
   [agenda](meetings/2012-07-24%20Meeting%20-%20OpenDNSSEC%20Development%20-%20OpenDNSSEC.pdf)
-  [minutes](meetings/2012-07-24%20Minutes%20-%20OpenDNSSEC%2-0Development%20-%20OpenDNSSEC.pdf)
+  [minutes](meetings/2012-07-24%20Minutes%20-%20OpenDNSSEC%20Development%20-%20OpenDNSSEC.pdf)
 - 2012-07-13 Enforcer NG teleconference
   [meeting](meetings/2012-07-13%20-%20Enforcer%20NG%20telecon%20-%20OpenDNSSEC%20Development%20-%20OpenDNSSEC.pdf)
 - 2012-07-10 (Project meeting, Telephone)
