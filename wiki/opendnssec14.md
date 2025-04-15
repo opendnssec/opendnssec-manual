@@ -37,5 +37,5 @@ The auditor is no longer supported in 1.4. This greatly reduced the dependencies
 - [OpenDNSSEC_Documentation_v1.4.pdf](assets/OpenDNSSEC_Documentation_v1.4.pdf)
 - [OpenDNSSEC_Documentation_v1.4.html.zip](assets/OpenDNSSEC_Documentation_v1.4.html.zip)
 - [OpenDNSSEC Documentation_v1.3.pdf](assets/OpenDNSSEC_Documentation_v1.3.pdf)
-- [OpenDNSSEC Documentation_v1.3.html.zip](assets/OpenDNSSEC_Documenation_v1.3.html.zip)
+- [OpenDNSSEC Documentation_v1.3.html.zip](assets/OpenDNSSEC_Documentation_v1.3.html.zip)
 
