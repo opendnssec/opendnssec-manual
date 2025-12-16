@@ -122,7 +122,7 @@ Other Enforcer Parameters:
 - ``<SocketFile>``, Socket to use for communicating between enforcer and enforcerd.
 - ``<WorkingDirectory>``, Location to store intermediate enforcer information. Default: ``/var/opendnssec/tmp``
 
-### DelegationSignerSubmitCommand and DelegationSignerRetractCommand
+#### DelegationSignerSubmitCommand and DelegationSignerRetractCommand
 
 This will make it possible to create a fully automatic KSK rollover, where OpenDNSSEC feed your program/script on stdin with the current set of DNSKEYs that we want to have in the parent as DS RRs.
 
@@ -130,7 +130,11 @@ __Key Identifier__: If the command defined here ends with ` --cka_id` then that 
 
 An example script for the `<DelegationSignerSubmitCommand>` command is available: which is a simple mail script (from 1.4 the eppclient is no longer supported). Remember that the ods-enforcer key ds-seen must be given in order to complete the rollover. This should only be done when the new DS RRs are available on the parents public nameservers.
 
-<Signer>
+### Signer
+
+Configuration for the Signer daemon is found in the ``<Signer>`` section of the configuration file:
+
+     <Signer>
         <Privileges>
             <User>opendnssec</User>
             <Group>opendnssec</Group>
